@@ -1,33 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+@layer base {
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-white;
+  font-family: "Maven Pro", sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  h1 {
+    @apply text-5xl font-semibold;
+  }
+
+  h2 {
+    @apply text-4xl font-semibold;
+  }
+
+  h3 {
+    @apply text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply text-2xl font-semibold;
+  }
+
+  h5 {
+    @apply text-xl font-semibold;
+  }
+
+  h6 {
+    @apply text-lg font-semibold;
+  }
+
+}
+
+@layer components {
+.btn-primary {
+  @apply px-[18px] py-[8px] inline-flex text-white bg-gradient-to-r from-purple-500 via-pink-400 bg-orange-300 rounded-[5px];
+}
+
+  .btn-outline-primary {
+    @apply p-[2px] inline-flex text-white bg-gradient-to-r from-purple-500 via-pink-400 bg-orange-300 rounded-[5px];
+    .btn-inner {
+      @apply px-[18px] py-[8px] text-white bg-darkblue rounded-[5px]
+    }
   }
 }

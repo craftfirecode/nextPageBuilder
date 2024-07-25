@@ -1,13 +1,27 @@
 import React from 'react';
 import HeadlineView from "@/component/HeadlineView";
+import AccordionView from "@/component/AccordionView";
+import ButtonView from "@/component/ButtonView";
 
 const Builder = (prop: any) => {
     const renderComponent = (component: any) => {
         switch (component.__component) {
+            case 'cms.accordion':
+                return (
+                    <div className="my-3">
+                        <AccordionView cms={component}/>
+                    </div>
+                );
             case 'cms.headline':
                 return (
                     <div className="my-3">
                         <HeadlineView cms={component}/>
+                    </div>
+                );
+            case 'cms.button':
+                return (
+                    <div className="my-3">
+                        <ButtonView cms={component}/>
                     </div>
                 );
             default:

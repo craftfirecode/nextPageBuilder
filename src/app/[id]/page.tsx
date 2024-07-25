@@ -14,7 +14,7 @@ async function getData(id: string | number) {
 export default async function Home({ params }: { params: { id: string } }) {
   const data = await getData(params.id)
   return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="">
         <Builder data={data}/>
       </main>
   );
