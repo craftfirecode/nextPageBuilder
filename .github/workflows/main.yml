@@ -12,12 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    services:
-      sqlite:
-        image: nouchka/sqlite3
-        options: >-
-          --mount type=bind,source=${{ github.workspace }}/.tmp,target=/data
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -30,6 +24,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set up SQLite database
+        run: |
+          mkdir -p .tmp
+          sqlite3 .tmp/data.db "VACUUM;"
+
       - name: Build the project
         run: npm run build
 
@@ -41,4 +40,3 @@ jobs:
         run: |
           echo "Deploying the application..."
           # Hier können Sie Ihre Bereitstellungsskripte hinzufügen
-
