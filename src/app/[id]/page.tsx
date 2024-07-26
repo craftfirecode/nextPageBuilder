@@ -18,7 +18,8 @@ async function getData(id: string | number) {
     if (mainItem && mainItem.submenu) {
       const submenuItem = findObjectByKeyValue(mainItem.submenu, "link", id);
       if (submenuItem) {
-        getID = submenuItem.id;
+        console.log("submenu");
+        getID = submenuItem.page.data.id;
       } else {
         console.log("No submenu item found with the specified link.");
       }
