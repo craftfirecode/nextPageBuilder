@@ -22,22 +22,29 @@ jobs:
           node-version: '14'
 
       - name: Create .tmp directory
-        run: mkdir -p .tmp
+        run: mkdir -p strapi/.tmp
 
       - name: Set up SQLite database
-        run: sqlite3 .tmp/data.db "VACUUM;"
+        run: sqlite3 strapi/.tmp/data.db "VACUUM;"
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd strapi
+          npm install
 
       - name: Build the project
-        run: npm run build
+        run: |
+          cd strapi
+          npm run build
 
       - name: Run tests
-        run: npm test
+        run: |
+          cd strapi
+          npm test
 
       - name: Deploy
         if: github.ref == 'refs/heads/main'
         run: |
+          cd strapi
           echo "Deploying the application..."
           # Hier können Sie Ihre Bereitstellungsskripte hinzufügen
