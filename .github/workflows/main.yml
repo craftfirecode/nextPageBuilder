@@ -37,8 +37,12 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Change to Strapi directory
+        run: cd strapi
+
       - name: Install dependencies
         run: npm install
+        working-directory: ./strapi
 
       - name: Configure Strapi database connection
         run: |
@@ -48,9 +52,12 @@ jobs:
           echo "DATABASE_NAME=strapi" >> .env
           echo "DATABASE_USERNAME=strapi_user" >> .env
           echo "DATABASE_PASSWORD=strapi_password" >> .env
+        working-directory: ./strapi
 
       - name: Build Strapi
         run: npm run build
+        working-directory: ./strapi
 
       - name: Run tests
         run: npm test
+        working-directory: ./strapi
