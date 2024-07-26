@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_cms_accordion_items",
+  "info": {
+    "displayName": "AccordionItems",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "collapsed": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

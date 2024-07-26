@@ -11,7 +11,7 @@ interface NavItem {
 async function getData(): Promise<NavItem[]> {
     const requestUrl = `http://localhost:1337/api/setting?populate=deep`;
     const headers = {
-        Authorization: 'Bearer ' + 'a10b082a4512eec295fccf53441c2d46e144ad735377a1724093aef47b43e4d23e9207ce031776f6f27d82625ecd6c2f9840d15d4b4b51a78eb263d8bbeaddff6bf74b3dd4b6c6f171ab1f04b22ff1d54c687b2091a545f5a615c632c1925823c8379dfe1cbf651dc1b6d944095f44af6ef4c227f7a162b1baa3bb3309785154',
+        Authorization: 'Bearer ' + 'a313688db4b5cdf8c736f117aeb3d6e33c9516f375d6748e0001e28e9cbd6d054aafcb0f44058d6d48c77e2931a89252e888b4061c8ac8445559bc3abc4ef860d319379ce3eac4e8e6ed9e051ffa28bf15cbf6b7556658cd78d7e94f16ce161e557be4957536f209a30dd24d977ef128bf7f89d88a9fed100b54f16a929e8c45',
     };
 
     try {
