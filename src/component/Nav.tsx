@@ -13,7 +13,6 @@ async function getData(id: string | number) {
 
 const Nav = async ({params}: any) => {
     const data = await getData(params)
-    // console.log(data);
     return (
         <nav>
             <ul>

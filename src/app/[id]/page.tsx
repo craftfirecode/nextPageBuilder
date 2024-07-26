@@ -43,7 +43,7 @@ async function getData(id: string | number) {
   // GET PAGE
   const requestUrl = `https://headless.mapztour.de/api/pages/${result.page.data.id}?populate=deep`
   const response = await axios.get(requestUrl, { headers });
-  // console.log(response.data);
+  console.log(response.data.data.attributes.cms);
   return response.data.data.attributes.cms;
 }
 

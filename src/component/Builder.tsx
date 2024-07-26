@@ -2,6 +2,7 @@ import React from 'react';
 import HeadlineView from "@/component/HeadlineView";
 import AccordionView from "@/component/AccordionView";
 import ButtonView from "@/component/ButtonView";
+import {CarouselView} from "@/component/CarouselView";
 
 const Builder = (prop: any) => {
     const renderComponent = (component: any) => {
@@ -16,6 +17,12 @@ const Builder = (prop: any) => {
                 return (
                     <div className="my-3">
                         <HeadlineView cms={component}/>
+                    </div>
+                );
+            case 'cms.carousel':
+                return (
+                    <div className="my-3">
+                        <CarouselView cms={component.carousel}/>
                     </div>
                 );
             case 'cms.button':

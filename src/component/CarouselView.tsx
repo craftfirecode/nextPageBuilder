@@ -1,4 +1,6 @@
-import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "./shadcn/CnCarousel.tsx";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/component/shadcn/CnCarousel";
+import React from "react";
+import Image from 'next/image';
 
 type CarouselViewProps = {
     cms: {
@@ -12,21 +14,25 @@ type CarouselViewProps = {
     }[];
 }
 
-export const CarouselView: React.FC<CarouselViewProps> = ({cms}) => {
+export const CarouselView: React.FC<CarouselViewProps> = ({ cms }) => {
     return (
         <Carousel className="w-full">
             <CarouselContent>
-                {cms.map((item, index) => (
+                {cms.map((item: { img: { data: { attributes: { url: string; }; }; }; }, index: number) => (
                     <CarouselItem key={index}>
-                        <img title="slider"
-                             alt="slider"
-                             className="w-full"
-                             src={import.meta.env.VITE_STRAPI_API_URL + item.img.data.attributes.url}/>
+                        <Image
+                            title="slider"
+                            alt="slider"
+                            src={"https://headless.mapztour.de/" + item.img.data.attributes.url}
+                            layout="responsive"
+                            width={100}
+                            height={475}
+                        />
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious/>
-            <CarouselNext/>
+            <CarouselPrevious />
+            <CarouselNext />
         </Carousel>
     )
 }
