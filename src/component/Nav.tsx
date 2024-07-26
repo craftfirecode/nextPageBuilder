@@ -28,6 +28,9 @@ const Nav = async () => {
 
     return (
         <nav>
+            <Link href="/">
+                Home
+            </Link>
             <ul>
                 {data.map((item) => (
                     <li key={item.id}>
