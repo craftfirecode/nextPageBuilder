@@ -23,7 +23,7 @@ async function getData(): Promise<NavItem[]> {
     }
 }
 
-const Nav = async ({ params }: { params: { id: string } }) => {
+const Nav = async () => {
     const data = await getData();
 
     return (
