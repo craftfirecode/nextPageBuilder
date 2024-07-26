@@ -21,13 +21,14 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Create .tmp directory
+        run: mkdir -p .tmp
 
       - name: Set up SQLite database
-        run: |
-          mkdir -p .tmp
-          sqlite3 .tmp/data.db "VACUUM;"
+        run: sqlite3 .tmp/data.db "VACUUM;"
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Build the project
         run: npm run build
