@@ -21,13 +21,21 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install MariaDB
+      - name: Install Chocolatey
         run: |
-          choco install mariadb --version=10.5.8 -y
-          mysqladmin -u root password root_password
+          Set-ExecutionPolicy Bypass -Scope Process -Force; `
+          [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+          iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-      - name: Create Strapi database
+      - name: Install MariaDB
+        run: choco install mariadb -y
+
+      - name: Start MariaDB Service
+        run: sc start mariadb
+
+      - name: Configure MariaDB
         run: |
+          mysqladmin -u root password "root_password"
           mysql -u root -proot_password -e "CREATE DATABASE strapi;"
           mysql -u root -proot_password -e "CREATE USER 'strapi_user'@'localhost' IDENTIFIED BY 'strapi_password';"
           mysql -u root -proot_password -e "GRANT ALL PRIVILEGES ON strapi.* TO 'strapi_user'@'localhost';"
@@ -39,12 +47,12 @@ jobs:
 
       - name: Configure Strapi database connection
         run: |
-          echo "DATABASE_CLIENT=mariadb" >> .env
-          echo "DATABASE_HOST=127.0.0.1" >> .env
-          echo "DATABASE_PORT=3306" >> .env
-          echo "DATABASE_NAME=strapi" >> .env
-          echo "DATABASE_USERNAME=strapi_user" >> .env
-          echo "DATABASE_PASSWORD=strapi_password" >> .env
+          echo "DATABASE_CLIENT=mariadb" >> ./strapi/.env
+          echo "DATABASE_HOST=127.0.0.1" >> ./strapi/.env
+          echo "DATABASE_PORT=3306" >> ./strapi/.env
+          echo "DATABASE_NAME=strapi" >> ./strapi/.env
+          echo "DATABASE_USERNAME=strapi_user" >> ./strapi/.env
+          echo "DATABASE_PASSWORD=strapi_password" >> ./strapi/.env
         working-directory: ./strapi
 
       - name: Build Strapi
