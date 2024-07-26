@@ -1,4 +1,4 @@
-name: Strapi CI
+name: CI/CD Pipeline
 
 on:
   push:
@@ -10,55 +10,35 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
+
+    services:
+      sqlite:
+        image: nouchka/sqlite3
+        options: >-
+          --mount type=bind,source=${{ github.workspace }}/.tmp,target=/data
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
 
-      - name: Install Chocolatey
-        run: |
-          Set-ExecutionPolicy Bypass -Scope Process -Force; `
-          [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
-          iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
-      - name: Install MariaDB
-        run: choco install mariadb -y
-
-      - name: Start MariaDB Service
-        run: sc start mariadb
-
-      - name: Configure MariaDB
-        run: |
-          mysqladmin -u root password "root_password"
-          mysql -u root -proot_password -e "CREATE DATABASE strapi;"
-          mysql -u root -proot_password -e "CREATE USER 'strapi_user'@'localhost' IDENTIFIED BY 'strapi_password';"
-          mysql -u root -proot_password -e "GRANT ALL PRIVILEGES ON strapi.* TO 'strapi_user'@'localhost';"
-          mysql -u root -proot_password -e "FLUSH PRIVILEGES;"
-
       - name: Install dependencies
         run: npm install
-        working-directory: ./strapi
 
-      - name: Configure Strapi database connection
-        run: |
-          echo "DATABASE_CLIENT=mariadb" >> ./strapi/.env
-          echo "DATABASE_HOST=127.0.0.1" >> ./strapi/.env
-          echo "DATABASE_PORT=3306" >> ./strapi/.env
-          echo "DATABASE_NAME=strapi" >> ./strapi/.env
-          echo "DATABASE_USERNAME=strapi_user" >> ./strapi/.env
-          echo "DATABASE_PASSWORD=strapi_password" >> ./strapi/.env
-        working-directory: ./strapi
-
-      - name: Build Strapi
+      - name: Build the project
         run: npm run build
-        working-directory: ./strapi
 
       - name: Run tests
         run: npm test
-        working-directory: ./strapi
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Deploying the application..."
+          # Hier können Sie Ihre Bereitstellungsskripte hinzufügen
+
