@@ -23,7 +23,7 @@ export const CarouselView: React.FC<CarouselViewProps> = ({ cms }) => {
                         <Image
                             title="slider"
                             alt="slider"
-                            src={"https://headless.mapztour.de/" + item.img.data.attributes.url}
+                            src={"http://localhost:1337/" + item.img.data.attributes.url}
                             layout="responsive"
                             width={100}
                             height={475}

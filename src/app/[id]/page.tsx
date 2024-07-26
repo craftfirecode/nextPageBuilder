@@ -2,13 +2,13 @@ import axios from "axios";
 import Builder from "@/component/Builder";
 
 const headers = {
-  Authorization: 'Bearer ' + '795ae4f8716b1e03b49e9c137966829a711209f2c20226a2ee3db1ae5b04012b7e4017ee8795c470d5d599009a6dae824a71d580a50280a1733b6881db90a3dfdaeb833b033ff12c97173931ac5e540e4a52a0ed2bb26768eab70a233e5ee3c7dd6c095e9c9efbe5ed10012d884ea7f0cbfb94d4455358d25fe54274757b9e26',
+  Authorization: 'Bearer ' + 'a10b082a4512eec295fccf53441c2d46e144ad735377a1724093aef47b43e4d23e9207ce031776f6f27d82625ecd6c2f9840d15d4b4b51a78eb263d8bbeaddff6bf74b3dd4b6c6f171ab1f04b22ff1d54c687b2091a545f5a615c632c1925823c8379dfe1cbf651dc1b6d944095f44af6ef4c227f7a162b1baa3bb3309785154',
 };
 
 async function getData(id: string | number) {
   try {
     // GET PAGE ID
-    const requestUrlNav = `https://headless.mapztour.de/api/setting?populate=deep`;
+    const requestUrlNav = `http://localhost:1337/api/setting?populate=deep`;
     const responseUrlNav = await axios.get(requestUrlNav, { headers });
     const navData = responseUrlNav.data.data.attributes.nav;
 
@@ -31,7 +31,7 @@ async function getData(id: string | number) {
     }
 
     // GET PAGE
-    const requestUrl = `https://headless.mapztour.de/api/pages/${getID}?populate=deep`;
+    const requestUrl = `http://localhost:1337/api/pages/${getID}?populate=deep`;
     const response = await axios.get(requestUrl, { headers });
     return response.data.data.attributes.cms;
   } catch (error) {
