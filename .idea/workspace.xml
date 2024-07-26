@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="Add backend local" />
+    <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="Add backend local">
+      <change afterPath="$PROJECT_DIR$/next/src/component/ClientWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next/src/component/CookieBanner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/component/Disclaimer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/component/Social.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/component/Ticker.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/component/TradingViewWidget.tsx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +55,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.build (1).executor": "Run",
     "npm.build.executor": "Run",
-    "npm.dev (1).executor": "Debug",
+    "npm.dev (1).executor": "Run",
     "npm.dev.executor": "Run",
     "npm.develop (1).executor": "Run",
     "npm.develop.executor": "Run",
@@ -63,6 +73,8 @@
       <recent name="C:\vhost\nextPageBuilder\src\component" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\vhost\nextPageBuilder\server" />
+      <recent name="C:\vhost\nextPageBuilder\strapi" />
       <recent name="C:\vhost\nextPageBuilder\.github\workflows " />
       <recent name="C:\vhost\nextPageBuilder" />
       <recent name="C:\vhost\my-app\src\app\[id]" />
@@ -154,7 +166,7 @@
       <workItem from="1721994698592" duration="91000" />
       <workItem from="1721994904751" duration="448000" />
       <workItem from="1722001480201" duration="967000" />
-      <workItem from="1722018501811" duration="2265000" />
+      <workItem from="1722018501811" duration="3218000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -356,7 +368,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722020609565</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add backend local">
+      <option name="closed" value="true" />
+      <created>1722020813140</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1722020813140</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add backend local">
+      <option name="closed" value="true" />
+      <created>1722020877439</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1722020877439</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
