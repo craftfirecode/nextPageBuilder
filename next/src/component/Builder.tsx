@@ -3,8 +3,11 @@ import HeadlineView from "@/component/HeadlineView";
 import AccordionView from "@/component/AccordionView";
 import ButtonView from "@/component/ButtonView";
 import {CarouselView} from "@/component/CarouselView";
+import ContentView from "@/component/ContentView";
+import ContentImageView from "@/component/ContentImageView";
 
 const Builder = (prop: any) => {
+    console.log(prop.data);
     const renderComponent = (component: any) => {
         switch (component.__component) {
             case 'cms.accordion':
@@ -23,6 +26,18 @@ const Builder = (prop: any) => {
                 return (
                     <div className="my-3">
                         <CarouselView cms={component.carousel}/>
+                    </div>
+                );
+            case 'cms.content':
+                return (
+                    <div className="my-3">
+                        <ContentView cms={component}/>
+                    </div>
+                );
+            case 'cms.content-image':
+                return (
+                    <div className="my-3">
+                        <ContentImageView cms={component}/>
                     </div>
                 );
             case 'cms.button':

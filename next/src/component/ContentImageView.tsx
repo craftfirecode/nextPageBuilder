@@ -27,7 +27,7 @@ const ContentImageView: React.FC<ContentImageViewProps> = ({cms}) => {
 
     return (
         <div className={'flex-row-reverse' + ' ' + cms.reverse ? '' : ''}>
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div
                     className={reverse ? 'order-2 flex flex-col items-start justify-center' : 'order-1 flex flex-col items-start justify-center'}>
                     <h4>{cms.headline}</h4>
@@ -40,7 +40,7 @@ const ContentImageView: React.FC<ContentImageViewProps> = ({cms}) => {
                 </div>
                 <div className={reverse ? 'order-1' : 'order-2'}>
                     <img className="" alt=""
-                         src={import.meta.env.VITE_STRAPI_API_URL + cms.image.data.attributes.url}/>
+                         src={"http://localhost:1337" + cms.image.data.attributes.url}/>
                 </div>
             </div>
         </div>

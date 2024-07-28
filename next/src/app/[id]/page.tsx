@@ -77,7 +77,15 @@ export default async function Home({ params }: { params: { id: string } }) {
   } catch (error) {
     return (
         <main className="">
-          <p>Error loading data. Please try again later.</p>
+          <div className="flex items-center justify-center h-screen">
+            <div className="text-center">
+              <h1 className="text-4xl font-bold">404</h1>
+              <p className="text-lg">Die Seite, die du suchst, konnte nicht gefunden werden.</p>
+              <a href="/"
+                 className="mt-4 inline-block px-6 py-2 text-sm font-semibold text-blue-800 bg-blue-100 rounded hover:bg-blue-200">Zurück
+                zur Startseite</a>
+            </div>
+          </div>
         </main>
     );
   }

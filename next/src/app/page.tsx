@@ -29,12 +29,6 @@ export default async function Home({params}: { params: { id: string } }) {
 
         return (
             <>
-                <div className="container bg-indigo-50">
-                    <div className="flex flex-col md:flex-row gap-4">
-                        <div className="bg-red-50 basis-1/2 lg:basis-1/3">Element 1</div>
-                        <div className="bg-red-50 basis-1/2 lg:basis-full">Element 2</div>
-                    </div>
-                </div>
                 <Builder data={data}/>
             </>
 

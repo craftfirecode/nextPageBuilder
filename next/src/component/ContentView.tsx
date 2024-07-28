@@ -1,14 +1,14 @@
-import RichText from "./RichText.tsx";
+import RichText from "@/component/RichText";
 
 type ContentViewProps = {
     content: string | number | undefined;
 }
 
-const ContentView = ({cms}: {
-    cms: ContentViewProps;
-}) => {
+const ContentView = ({cms}: any) => {
     return (
-        <RichText content={cms.content}/>
+        <div>
+            {cms && <RichText content={cms.content}/>}
+        </div>
     );
 }
 
