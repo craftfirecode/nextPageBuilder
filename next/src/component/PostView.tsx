@@ -12,7 +12,7 @@ async function getData(filterName: string) {
         Authorization: 'Bearer ' + 'a313688db4b5cdf8c736f117aeb3d6e33c9516f375d6748e0001e28e9cbd6d054aafcb0f44058d6d48c77e2931a89252e888b4061c8ac8445559bc3abc4ef860d319379ce3eac4e8e6ed9e051ffa28bf15cbf6b7556658cd78d7e94f16ce161e557be4957536f209a30dd24d977ef128bf7f89d88a9fed100b54f16a929e8c45',
     };
     try {
-        const requestUrlNav = `http://localhost:1337/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName} `;
+        const requestUrlNav = `http://localhost:1337/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}`;
         const responseUrlNav = await axios.get(requestUrlNav, {headers});
         return responseUrlNav.data.data;
     } catch (error) {
