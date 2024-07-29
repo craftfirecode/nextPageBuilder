@@ -9,13 +9,13 @@
     "title": {
       "type": "string"
     },
-    "content": {
-      "type": "text"
-    },
     "button": {
       "type": "component",
       "repeatable": false,
       "component": "cms.button"
+    },
+    "content": {
+      "type": "blocks"
     }
   }
 }

@@ -195,8 +195,8 @@ export interface CmsModal extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    content: Attribute.Text;
     button: Attribute.Component<'cms.button'>;
+    content: Attribute.Blocks;
   };
 }
 
