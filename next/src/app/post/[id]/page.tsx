@@ -8,6 +8,7 @@ const headers = {
 async function getData(postID: string | number) {
     try {
         const requestUrl = `http://localhost:1337/api/posts/${postID}?populate=deep`;
+        //const requestUrl = `http://localhost:1337/api/posts?populate=deep&filters[title]=${postID}`;
         const response = await axios.get(requestUrl, { headers });
         return response.data.data.attributes.cms;
     } catch (error) {

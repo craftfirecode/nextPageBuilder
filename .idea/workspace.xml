@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="anpassungen">
-      <change beforePath="$PROJECT_DIR$/next/src/component/PostView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/PostView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/post/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/post/[id]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +165,7 @@
       <workItem from="1722239854380" duration="33000" />
       <workItem from="1722240359597" duration="921000" />
       <workItem from="1722247735967" duration="616000" />
-      <workItem from="1722250188433" duration="2203000" />
+      <workItem from="1722250188433" duration="2273000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -479,7 +479,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722252525993</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="anpassungen">
+      <option name="closed" value="true" />
+      <created>1722252622738</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1722252622738</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
