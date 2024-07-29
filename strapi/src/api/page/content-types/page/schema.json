@@ -37,6 +37,9 @@
       "type": "component",
       "repeatable": false,
       "component": "meta.seo"
+    },
+    "sitemap": {
+      "type": "string"
     }
   }
 }
