@@ -66,11 +66,10 @@ export interface CmsContentImage extends Schema.Component {
     description: '';
   };
   attributes: {
-    headline: Attribute.String;
-    content: Attribute.Text;
     button: Attribute.Component<'cms.button'>;
     image: Attribute.Media;
     reverse: Attribute.Boolean & Attribute.DefaultTo<false>;
+    content: Attribute.Blocks;
   };
 }
 

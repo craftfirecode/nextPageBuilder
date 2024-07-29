@@ -6,12 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "headline": {
-      "type": "string"
-    },
-    "content": {
-      "type": "text"
-    },
     "button": {
       "type": "component",
       "repeatable": false,
@@ -28,6 +22,9 @@
     "reverse": {
       "type": "boolean",
       "default": false
+    },
+    "content": {
+      "type": "blocks"
     }
   }
 }

@@ -1,5 +1,6 @@
 import ButtonView from "./ButtonView";
 import React from "react";
+import RichText from "@/component/RichText";
 
 type ContentImageViewProps = {
     cms: {
@@ -30,8 +31,7 @@ const ContentImageView: React.FC<ContentImageViewProps> = ({cms}) => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div
                     className={reverse ? 'order-2 flex flex-col items-start justify-center' : 'order-1 flex flex-col items-start justify-center'}>
-                    <h4>{cms.headline}</h4>
-                    <p className="my-[15px]">{cms.content}</p>
+                    <RichText content={cms.content}/>
                     {cms.button ? (
 
                         <ButtonView cms={cms.button}></ButtonView>
