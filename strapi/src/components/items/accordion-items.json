@@ -10,11 +10,7 @@
       "type": "string"
     },
     "content": {
-      "type": "text"
-    },
-    "collapsed": {
-      "type": "boolean",
-      "default": true
+      "type": "blocks"
     }
   }
 }

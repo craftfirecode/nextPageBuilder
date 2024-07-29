@@ -1,5 +1,6 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
+import RichText from "@/component/RichText";
 
 type AccordionViewProps = {
     cms: {
@@ -43,7 +44,7 @@ const AccordionView = (cms: AccordionViewProps) => {
                             className="text-black bg-mauve2 data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden text-[15px]"
                         >
                             <div className="py-[15px] px-5">
-                                {item.content}
+                                <RichText content={item.content} />
                             </div>
                         </Accordion.Content>
                     </Accordion.Item>

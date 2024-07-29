@@ -293,8 +293,7 @@ export interface ItemsAccordionItems extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    content: Attribute.Text;
-    collapsed: Attribute.Boolean & Attribute.DefaultTo<true>;
+    content: Attribute.Blocks;
   };
 }
 
