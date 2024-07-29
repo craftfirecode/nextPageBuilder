@@ -9,9 +9,13 @@
     "categoryList": {
       "type": "enumeration",
       "enum": [
-        "memeCoin",
-        "memeNews",
-        "memePresale"
+        "KI",
+        "React",
+        "WordPress",
+        "NextJs",
+        "Figma",
+        "WebUI",
+        "WebDev"
       ]
     }
   }

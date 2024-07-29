@@ -6,9 +6,10 @@ import {CarouselView} from "@/component/CarouselView";
 import ContentView from "@/component/ContentView";
 import ContentImageView from "@/component/ContentImageView";
 import HeroView from "@/component/HeroView";
+import PostView from "@/component/PostView";
 
 const Builder = (prop: any) => {
-    console.log(prop.data);
+    // console.log(prop.data);
     const renderComponent = (component: any) => {
         switch (component.__component) {
             case 'cms.accordion':
@@ -45,6 +46,12 @@ const Builder = (prop: any) => {
                 return (
                     <div className="my-3">
                         <ButtonView cms={component}/>
+                    </div>
+                );
+            case 'cms.post-category':
+                return (
+                    <div className="my-3">
+                        <PostView cms={component}/>
                     </div>
                 );
             case 'cms.hero':

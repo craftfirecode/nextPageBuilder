@@ -340,7 +340,7 @@ export interface ItemsPostCategoryList extends Schema.Component {
   };
   attributes: {
     categoryList: Attribute.Enumeration<
-      ['memeCoin', 'memeNews', 'memePresale']
+      ['KI', 'React', 'WordPress', 'NextJs', 'Figma', 'WebUI', 'WebDev']
     >;
   };
 }
