@@ -9,7 +9,7 @@ type PostViewProps = {
 
 async function getData(filterName: string) {
     const headers = {
-        Authorization: 'Bearer ' + 'a313688db4b5cdf8c736f117aeb3d6e33c9516f375d6748e0001e28e9cbd6d054aafcb0f44058d6d48c77e2931a89252e888b4061c8ac8445559bc3abc4ef860d319379ce3eac4e8e6ed9e051ffa28bf15cbf6b7556658cd78d7e94f16ce161e557be4957536f209a30dd24d977ef128bf7f89d88a9fed100b54f16a929e8c45',
+        Authorization: 'Bearer ' + 'e7507a1e52eee31759033b3a3b9e6c51a6be94d5dc2bfe208b27f1c2100cf475c4f534fdad57ae4ecc60a9feae9ed49a4d12a8309cf56a5ba59d1b4c39540425f89d4cb3ce7302cc4994179163ae37dfb8e2a6279a8341203901bc63536e972f8e2a53dad756e71e7b11b442568df756bce8a53da3a22b1602df0909d96c117a',
     };
     try {
         const requestUrlNav = `http://localhost:1337/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}`;
@@ -22,6 +22,7 @@ async function getData(filterName: string) {
 }
 
 async function PostView(cms: PostViewProps) {
+    console.log(cms);
     const data: [] = await getData(cms.cms.category.categoryList);
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -33,7 +34,7 @@ async function PostView(cms: PostViewProps) {
                     <div className="p-4">
                         <h4 className="text-lg font-semibold mb-2">{item.attributes.title}</h4>
                         <p className="text-gray-600">{item.attributes.description}</p>
-                        <Link href={'/post/' + item.id}>
+                        <Link href={'/post/' + item.attributes.permalinks}>
                             <CnButton className="mt-3">
                                 <span>Anschauen</span>
                                 <ArrowRightIcon className="ms-2"/>
