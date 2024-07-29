@@ -7,9 +7,10 @@ import ContentView from "@/component/ContentView";
 import ContentImageView from "@/component/ContentImageView";
 import HeroView from "@/component/HeroView";
 import PostView from "@/component/PostView";
+import ModalView from "@/component/ModalView";
 
 const Builder = (prop: any) => {
-    // console.log(prop.data);
+    console.log(prop.data);
     const renderComponent = (component: any) => {
         switch (component.__component) {
             case 'cms.accordion':
@@ -22,6 +23,12 @@ const Builder = (prop: any) => {
                 return (
                     <div className="my-3">
                         <HeadlineView cms={component}/>
+                    </div>
+                );
+            case 'cms.modal':
+                return (
+                    <div className="my-3">
+                        <ModalView cms={component}/>
                     </div>
                 );
             case 'cms.carousel':

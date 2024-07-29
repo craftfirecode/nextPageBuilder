@@ -1,6 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import {Cross2Icon} from '@radix-ui/react-icons';
-import ButtonView from "./ButtonView.tsx";
+import ButtonView from "@/component/ButtonView";
 
 type ModalViewProps = {
     cms: {
@@ -15,8 +15,8 @@ const ModalView = (cms: ModalViewProps) => {
         <>
             <Dialog.Root>
                 <Dialog.Trigger asChild>
-                    <button>
-                        <ButtonView cms={cms.cms.button}></ButtonView>
+                    <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black hover:bg-black text-white h-9 px-4 py-2 mt-3">
+                        Action
                     </button>
                 </Dialog.Trigger>
                 <Dialog.Portal>
