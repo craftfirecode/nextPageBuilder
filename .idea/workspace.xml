@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="anpassungen">
+      <change afterPath="$PROJECT_DIR$/next/src/app/post/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/Builder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/Builder.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/PostView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/PostView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/post-category-list.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/components/items/post-category-list.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/types/generated/components.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/types/generated/components.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -433,7 +430,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722240996261</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="anpassungen">
+      <option name="closed" value="true" />
+      <created>1722245979553</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1722245979553</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
