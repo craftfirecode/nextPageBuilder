@@ -1,5 +1,5 @@
-import ButtonView from "./ButtonView";
-import RichText from "./RichText.tsx";
+import RichText from "@/component/RichText";
+import ButtonView from "@/component/ButtonView";
 
 type HeroViewProps = {
     cms: {
@@ -20,7 +20,7 @@ type HeroViewProps = {
 
 const HeroView = (cms: HeroViewProps) => {
     const backgroundStyle: any = {
-        backgroundImage: `url(${import.meta.env.VITE_STRAPI_API_URL}${cms.cms.img?.data?.attributes.url || ''})`,
+        backgroundImage: `url(http://localhost:1337${cms.cms.img?.data?.attributes.url || ''})`,
     };
 
     let vh: any;
@@ -45,7 +45,7 @@ const HeroView = (cms: HeroViewProps) => {
 
     return (
         <div className={`hero bg-cover bg-center ${cms.cms.vh}`} style={backgroundStyle}>
-            <div className={"container mx-auto" + " " + vh}>
+            <div className={"" + " " + vh}>
                 <div className="flex h-[100%] flex-col justify-center items-center">
                     {cms.cms.content && <RichText content={cms.cms.content}></RichText>}
                     {cms.cms.button &&

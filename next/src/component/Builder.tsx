@@ -5,6 +5,7 @@ import ButtonView from "@/component/ButtonView";
 import {CarouselView} from "@/component/CarouselView";
 import ContentView from "@/component/ContentView";
 import ContentImageView from "@/component/ContentImageView";
+import HeroView from "@/component/HeroView";
 
 const Builder = (prop: any) => {
     console.log(prop.data);
@@ -44,6 +45,12 @@ const Builder = (prop: any) => {
                 return (
                     <div className="my-3">
                         <ButtonView cms={component}/>
+                    </div>
+                );
+            case 'cms.hero':
+                return (
+                    <div className="my-3">
+                        <HeroView cms={component}/>
                     </div>
                 );
             default:
