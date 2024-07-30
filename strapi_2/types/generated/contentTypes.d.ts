@@ -1019,7 +1019,7 @@ export interface ApiPostPost extends Schema.CollectionType {
       'manyToOne',
       'api::author.author'
     >;
-    permalinks: Attribute.String & Attribute.Required & Attribute.Unique;
+    url: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

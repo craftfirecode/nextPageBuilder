@@ -34,7 +34,7 @@ async function PostView(cms: PostViewProps) {
                     <div className="p-4">
                         <h4 className="text-lg font-semibold mb-2">{item.attributes.title}</h4>
                         <p className="text-gray-600">{item.attributes.description}</p>
-                        <Link href={'/post/' + item.attributes.permalinks}>
+                        <Link href={'/post/' + item.attributes.url}>
                             <CnButton className="mt-3">
                                 <span>Anschauen</span>
                                 <ArrowRightIcon className="ms-2"/>

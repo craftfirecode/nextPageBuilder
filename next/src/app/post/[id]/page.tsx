@@ -7,7 +7,7 @@ const headers = {
 
 async function getData(permalinks: string | number) {
     try {
-        const requestUrl = `http://localhost:1337/api/posts?populate=deep&filters[permalinks][$eq]=${permalinks}`;
+        const requestUrl = `http://localhost:1337/api/posts?populate=deep&filters[url][$eq]=${permalinks}`;
         const response = await axios.get(requestUrl, { headers });
         return response.data.data[0].attributes.cms;
     } catch (error) {

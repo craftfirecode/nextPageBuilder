@@ -64,10 +64,8 @@
       "target": "api::author.author",
       "inversedBy": "posts"
     },
-    "permalinks": {
-      "type": "string",
-      "required": true,
-      "unique": true
+    "url": {
+      "type": "string"
     }
   }
 }
