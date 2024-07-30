@@ -34,14 +34,14 @@ const Nav = async () => {
             <ul>
                 {data.map((item) => (
                     <li key={item.id}>
-                        <Link href={item.link}>
+                        <Link href={"/" + item.link}>
                             {item.title}
                         </Link>
                         {item.submenu && item.submenu.length > 0 && (
                             <ul>
                                 {item.submenu.map((subItem) => (
                                     <li key={subItem.id}>
-                                        <Link href={subItem.link}>
+                                        <Link href={"/" + subItem.link}>
                                             {subItem.title}
                                         </Link>
                                     </li>

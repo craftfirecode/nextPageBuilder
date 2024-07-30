@@ -11,7 +11,7 @@ async function getData(id: string | number) {
     const requestUrlNav = `http://localhost:1337/api/setting?populate=deep`;
     const responseUrlNav = await axios.get(requestUrlNav, { headers });
     const navData = responseUrlNav.data.data.attributes.nav;
-
+    console.log('demo', navData[0].submenu);
     const mainItem = findObjectByKeyValue(navData, "link", id);
     let getID = mainItem?.page?.data?.id;
 
@@ -67,7 +67,8 @@ function searchObject(obj: any, key: string | number, value: string | number): b
 
 export default async function Home({ params }: { params: { id: string } }) {
   try {
-    const data = await getData(params.id);
+    console.log(params.id.join('/'))
+    const data = await getData(params.id.join('/'));
 
     return (
         <main className="">
