@@ -1033,53 +1033,6 @@ export interface ApiPostPost extends Schema.CollectionType {
   };
 }
 
-export interface ApiPresalePresale extends Schema.CollectionType {
-  collectionName: 'presales';
-  info: {
-    singularName: 'presale';
-    pluralName: 'presales';
-    displayName: 'Presale';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    page: Attribute.String;
-    x: Attribute.String;
-    dex: Attribute.Text;
-    symbol: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    chain: Attribute.String;
-    completionRate: Attribute.Integer &
-      Attribute.SetMinMax<
-        {
-          min: 1;
-          max: 100;
-        },
-        number
-      >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::presale.presale',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::presale.presale',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    sitemap_exclude: Attribute.Boolean &
-      Attribute.Private &
-      Attribute.DefaultTo<false>;
-  };
-}
-
 export interface ApiSettingSetting extends Schema.SingleType {
   collectionName: 'settings';
   info: {
@@ -1143,7 +1096,6 @@ declare module '@strapi/types' {
       'api::author.author': ApiAuthorAuthor;
       'api::page.page': ApiPagePage;
       'api::post.post': ApiPostPost;
-      'api::presale.presale': ApiPresalePresale;
       'api::setting.setting': ApiSettingSetting;
     }
   }
