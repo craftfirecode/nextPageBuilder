@@ -1098,6 +1098,7 @@ export interface ApiSettingSetting extends Schema.SingleType {
       'oneToOne',
       'api::page.page'
     >;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

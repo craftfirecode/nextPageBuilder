@@ -4,23 +4,89 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="sitemap anpassen und blog url system">
+    <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="clean up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/[...id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/[...id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/post/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/post/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/CarouselView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/CarouselView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/ContentImageView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/ContentImageView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/HeroView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/HeroView.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next/src/component/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/Nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/PostView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/PostView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/Sheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/Sheet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/VHeroView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/VHeroView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/dropdown/Dropdown.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/dropdown/dropdown.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/component/shadcn/table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/component/shadcn/table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi_2/types/generated/components.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/strapi_2/types/generated/components.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.strapi/client/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.strapi/client/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/database.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/middlewares.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/database/migrations/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/jsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/public/uploads/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/admin/app.example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/admin/webpack.config.example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/content-types/author/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/controllers/author.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/routes/author.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/services/author.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/content-types/page/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/controllers/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/routes/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/services/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/content-types/post/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/controllers/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/routes/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/services/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/presale/content-types/presale/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/presale/controllers/presale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/presale/routes/presale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/presale/services/presale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/content-types/setting/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/controllers/setting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/routes/setting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/services/setting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/accordion.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/button.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/carousel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/coin-chart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/content-image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/content.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/disclaimer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/headline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/hero.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/list.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/map.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/margin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/modal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/post-category.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/presale.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/rating.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/screener.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/social.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/v-hero.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/accordion-items.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/carousel-items.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/list-items.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/nav-items.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/post-category-list.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/meta/seo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/nav/nav.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/extensions/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/types/generated/components.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/types/generated/contentTypes.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi_2/src/api/setting/content-types/setting/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi_2/src/api/setting/content-types/setting/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi_2/types/generated/contentTypes.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/strapi_2/types/generated/contentTypes.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +154,7 @@
       <recent name="C:\vhost\my-app\src\app\[id]" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (1)">
+  <component name="RunManager" selected="npm.develop (2)">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/next/package.json" />
       <command value="run" />
@@ -142,8 +208,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev (1)" />
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.develop (2)" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.develop (1)" />
         <item itemvalue="npm.develop" />
       </list>
@@ -185,7 +251,9 @@
       <workItem from="1722254722519" duration="378000" />
       <workItem from="1722273999732" duration="1558000" />
       <workItem from="1722323826557" duration="4173000" />
-      <workItem from="1722523815546" duration="915000" />
+      <workItem from="1722523815546" duration="2010000" />
+      <workItem from="1722533403078" duration="521000" />
+      <workItem from="1722533937130" duration="120000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -547,7 +615,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722327978156</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="clean up">
+      <option name="closed" value="true" />
+      <created>1722524794448</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1722524794448</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,6 +653,7 @@
     <MESSAGE value="anpassungen" />
     <MESSAGE value="sub menu erlauben" />
     <MESSAGE value="sitemap anpassen und blog url system" />
-    <option name="LAST_COMMIT_MESSAGE" value="sitemap anpassen und blog url system" />
+    <MESSAGE value="clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
 </project>
