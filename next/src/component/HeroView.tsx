@@ -20,7 +20,7 @@ type HeroViewProps = {
 
 const HeroView = (cms: HeroViewProps) => {
     const backgroundStyle: any = {
-        backgroundImage: `url(http://localhost:1337${cms.cms.img?.data?.attributes.url || ''})`,
+        backgroundImage: `url(${process.env.VITE_STRAPI_API_URL} + ${cms.cms.img?.data?.attributes.url || ''})`,
     };
 
     let vh: any;

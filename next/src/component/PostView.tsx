@@ -9,10 +9,10 @@ type PostViewProps = {
 
 async function getData(filterName: string) {
     const headers = {
-        Authorization: 'Bearer ' + 'e7507a1e52eee31759033b3a3b9e6c51a6be94d5dc2bfe208b27f1c2100cf475c4f534fdad57ae4ecc60a9feae9ed49a4d12a8309cf56a5ba59d1b4c39540425f89d4cb3ce7302cc4994179163ae37dfb8e2a6279a8341203901bc63536e972f8e2a53dad756e71e7b11b442568df756bce8a53da3a22b1602df0909d96c117a',
+        Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
     };
     try {
-        const requestUrlNav = `http://localhost:1337/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}`;
+        const requestUrlNav = `${process.env.VITE_STRAPI_API_URL}/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}`;
         const responseUrlNav = await axios.get(requestUrlNav, {headers});
         return responseUrlNav.data.data;
     } catch (error) {
@@ -28,7 +28,7 @@ async function PostView(cms: PostViewProps) {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {data && data.map((item: any, index: number) => (
                 <div key={index} className="group bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src={"http://localhost:1337" + item.attributes.img.data.attributes.url}
+                    <img src={process.env.VITE_STRAPI_API_URL + item.attributes.img.data.attributes.url}
                          className="w-full h-48 object-cover"
                          alt="..."/>
                     <div className="p-4">

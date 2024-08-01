@@ -2,13 +2,13 @@ import axios from "axios";
 import Builder from "@/component/Builder";
 
 const headers = {
-  Authorization: 'Bearer ' + 'e7507a1e52eee31759033b3a3b9e6c51a6be94d5dc2bfe208b27f1c2100cf475c4f534fdad57ae4ecc60a9feae9ed49a4d12a8309cf56a5ba59d1b4c39540425f89d4cb3ce7302cc4994179163ae37dfb8e2a6279a8341203901bc63536e972f8e2a53dad756e71e7b11b442568df756bce8a53da3a22b1602df0909d96c117a',
+  Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
 };
 
 async function getData(id: string | number) {
   try {
     // GET PAGE ID
-    const requestUrlNav = `http://localhost:1337/api/setting?populate=deep`;
+    const requestUrlNav = `${process.env.VITE_STRAPI_API_URL}/api/setting?populate=deep`;
     const responseUrlNav = await axios.get(requestUrlNav, { headers });
     const navData = responseUrlNav.data.data.attributes.nav;
     console.log('demo', navData[0].submenu);
@@ -32,7 +32,7 @@ async function getData(id: string | number) {
     }
 
     // GET PAGE
-    const requestUrl = `http://localhost:1337/api/pages/${getID}?populate=deep`;
+    const requestUrl = `${process.env.VITE_STRAPI_API_URL}/api/pages/${getID}?populate=deep`;
     const response = await axios.get(requestUrl, { headers });
     return response.data.data.attributes.cms;
   } catch (error) {
@@ -65,7 +65,7 @@ function searchObject(obj: any, key: string | number, value: string | number): b
   return false;
 }
 
-export default async function Home({ params }: { params: { id: string } }) {
+export default async function Home({ params }: { params: { id: [] } }) {
   try {
     console.log(params.id.join('/'))
     const data = await getData(params.id.join('/'));

@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import ButtonView from "./ButtonView";
 import {BlocksRenderer} from "@strapi/blocks-react-renderer";
-import {Link} from "react-router-dom";
+import Link from "next/link";
 
 type VHeroViewProps = {
     cms: {
@@ -30,7 +30,7 @@ const VHeroView = (cms: VHeroViewProps) => {
     const [link, setLink] = useState("");
 
     const maskBackgroundStyle = {
-        backgroundImage: `url(${import.meta.env.VITE_STRAPI_API_URL}${cms.cms.mask?.data?.attributes.url || ''})`,
+        backgroundImage: `url(${process.env.VITE_STRAPI_API_URL}${cms.cms.mask?.data?.attributes.url || ''})`,
     };
 
     useEffect(() => {
@@ -44,7 +44,7 @@ const VHeroView = (cms: VHeroViewProps) => {
         }
 
         if (cms.cms.file.data !== null) {
-            setLink(import.meta.env.VITE_STRAPI_API_URL + '' + cms.cms.file.data.attributes.url);
+            setLink(process.env.VITE_STRAPI_API_URL + '' + cms.cms.file.data.attributes.url);
         }
     }, [cms.cms]);
 
@@ -101,7 +101,7 @@ const VHeroView = (cms: VHeroViewProps) => {
                                     }
                                 },
                                 // For links, you may want to use the component from your router or framework
-                                link: ({children, url}) => <Link to={url}>{children}</Link>,
+                                link: ({children, url}) => <Link href={url}>{children}</Link>,
                             }}
                             modifiers={{
                                 bold: ({children}) => <strong>{children}</strong>,

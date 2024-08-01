@@ -15,6 +15,19 @@ export interface NavNav extends Schema.Component {
   };
 }
 
+export interface MetaSeo extends Schema.Component {
+  collectionName: 'components_meta_seos';
+  info: {
+    displayName: 'SEO';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    ogImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface ItemsPostCategoryList extends Schema.Component {
   collectionName: 'components_items_post_category_lists';
   info: {
@@ -73,19 +86,6 @@ export interface ItemsAccordionItems extends Schema.Component {
   attributes: {
     title: Attribute.String;
     content: Attribute.Blocks;
-  };
-}
-
-export interface MetaSeo extends Schema.Component {
-  collectionName: 'components_meta_seos';
-  info: {
-    displayName: 'SEO';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.Text & Attribute.Required;
-    ogImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -377,12 +377,12 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'nav.nav': NavNav;
+      'meta.seo': MetaSeo;
       'items.post-category-list': ItemsPostCategoryList;
       'items.nav-items': ItemsNavItems;
       'items.list-items': ItemsListItems;
       'items.carousel-items': ItemsCarouselItems;
       'items.accordion-items': ItemsAccordionItems;
-      'meta.seo': MetaSeo;
       'cms.v-hero': CmsVHero;
       'cms.update': CmsUpdate;
       'cms.social': CmsSocial;
