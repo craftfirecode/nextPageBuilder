@@ -24,6 +24,7 @@ async function getData(): Promise<NavData> {
     const requestUrl = `${process.env.VITE_STRAPI_API_URL}/api/setting?populate=deep`;
     const headers = {
         Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
     };
 
     try {
