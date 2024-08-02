@@ -4,79 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="clean up">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/config/admin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/config/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/config/database.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/config/middlewares.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/config/plugins.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/config/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/database/migrations/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/jsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/public/uploads/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/admin/app.example.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/admin/webpack.config.example.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/content-types/author/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/controllers/author.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/routes/author.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/services/author.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/content-types/page/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/controllers/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/routes/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/services/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/content-types/post/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/controllers/post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/routes/post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/services/post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/content-types/setting/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/controllers/setting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/routes/setting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/services/setting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/accordion.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/button.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/carousel.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/coin-chart.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/collection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/content-image.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/content.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/disclaimer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/headline.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/hero.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/list.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/margin.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/modal.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/post-category.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/presale.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/rating.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/screener.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/social.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/v-hero.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/accordion-items.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/carousel-items.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/list-items.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/nav-items.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/post-category-list.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/meta/seo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/components/nav/nav.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/extensions/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/types/generated/components.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/types/generated/contentTypes.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/yarn.lock" beforeDir="false" />
+    <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="submenu fix">
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,11 +13,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -111,47 +35,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "live",
-    "last_opened_file_path": "C:/vhost/nextPageBuilderAPI",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build (1).executor": "Run",
-    "npm.build.executor": "Run",
-    "npm.dev (1).executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.develop (1).executor": "Run",
-    "npm.develop (2).executor": "Run",
-    "npm.develop.executor": "Run",
-    "npm.start.executor": "Run",
-    "ts.external.directory.path": "C:\\vhost\\nextPageBuilder\\next\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/vhost/cmsBraunschweig&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\vhost\\nextPageBuilder\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\vhost\nextPageBuilder\next\src\app\[id]\[id]" />
-      <recent name="C:\vhost\nextPageBuilder\next\src\app\[id]" />
-      <recent name="C:\vhost\nextPageBuilder\next\src\app" />
-      <recent name="C:\vhost\nextPageBuilder\.github\workflows " />
-      <recent name="C:\vhost\nextPageBuilder\strapi" />
+      <recent name="C:\vhost\nextPageBuilder\src\app" />
+      <recent name="C:\vhost\nextPageBuilder\src" />
+      <recent name="C:\vhost\nextPageBuilder\src\component" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\vhost\nextPageBuilder\server" />
-      <recent name="C:\vhost\nextPageBuilder\strapi" />
-      <recent name="C:\vhost\nextPageBuilder\.github\workflows " />
-      <recent name="C:\vhost\nextPageBuilder" />
       <recent name="C:\vhost\my-app\src\app\[id]" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/next/package.json" />
+  <component name="RunManager" selected="npm.develop (1)">
+    <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
       <scripts>
         <script value="build" />
@@ -160,8 +75,8 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/next/package.json" />
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
@@ -180,16 +95,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="develop (2)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/strapi_2/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="develop" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="develop" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
@@ -200,13 +105,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.develop (1)" />
-        <item itemvalue="npm.dev (1)" />
-        <item itemvalue="npm.develop (2)" />
         <item itemvalue="npm.develop" />
+        <item itemvalue="npm.build (1)" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -232,28 +147,6 @@
       <workItem from="1721978218705" duration="4871000" />
       <workItem from="1721992202785" duration="2346000" />
       <workItem from="1721994665173" duration="17000" />
-      <workItem from="1721994698592" duration="91000" />
-      <workItem from="1721994904751" duration="448000" />
-      <workItem from="1722001480201" duration="967000" />
-      <workItem from="1722018501811" duration="3272000" />
-      <workItem from="1722023294520" duration="119000" />
-      <workItem from="1722165014020" duration="2269000" />
-      <workItem from="1722180851236" duration="1547000" />
-      <workItem from="1722239854380" duration="33000" />
-      <workItem from="1722240359597" duration="921000" />
-      <workItem from="1722247735967" duration="616000" />
-      <workItem from="1722250188433" duration="3233000" />
-      <workItem from="1722254722519" duration="378000" />
-      <workItem from="1722273999732" duration="1558000" />
-      <workItem from="1722323826557" duration="4173000" />
-      <workItem from="1722523815546" duration="2010000" />
-      <workItem from="1722533403078" duration="521000" />
-      <workItem from="1722533937130" duration="149000" />
-      <workItem from="1722534096980" duration="150000" />
-      <workItem from="1722534436610" duration="86000" />
-      <workItem from="1722585104815" duration="770000" />
-      <workItem from="1722612257763" duration="1304000" />
-      <workItem from="1722613602448" duration="681000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -335,318 +228,11 @@
       <option name="project" value="LOCAL" />
       <updated>1721994231237</updated>
     </task>
-    <task id="LOCAL-00011" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1721995309492</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1721995309492</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722018863660</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1722018863660</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722018927246</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1722018927246</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722018964370</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1722018964370</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722019030426</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1722019030426</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722019100086</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1722019100086</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722019173682</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1722019173682</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722019625323</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1722019625323</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722019937518</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1722019937518</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722020235828</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1722020235828</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722020320958</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1722020320958</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722020422832</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1722020422832</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722020496191</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1722020496191</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722020573575</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1722020573575</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722020609565</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1722020609565</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722020813140</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1722020813140</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722020877439</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1722020877439</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722021774377</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1722021774377</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722021817398</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1722021817398</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Add backend local">
-      <option name="closed" value="true" />
-      <created>1722167297682</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1722167297682</updated>
-    </task>
-    <task id="LOCAL-00031" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722182322659</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1722182322659</updated>
-    </task>
-    <task id="LOCAL-00032" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722240690013</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1722240690013</updated>
-    </task>
-    <task id="LOCAL-00033" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722240996261</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1722240996261</updated>
-    </task>
-    <task id="LOCAL-00034" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722245979553</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1722245979553</updated>
-    </task>
-    <task id="LOCAL-00035" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722246929012</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1722246929012</updated>
-    </task>
-    <task id="LOCAL-00036" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722247345111</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1722247345111</updated>
-    </task>
-    <task id="LOCAL-00037" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722247358582</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1722247358582</updated>
-    </task>
-    <task id="LOCAL-00038" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722248352581</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1722248352581</updated>
-    </task>
-    <task id="LOCAL-00039" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722252525993</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1722252525993</updated>
-    </task>
-    <task id="LOCAL-00040" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722252622738</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1722252622738</updated>
-    </task>
-    <task id="LOCAL-00041" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722252696236</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1722252696236</updated>
-    </task>
-    <task id="LOCAL-00042" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722275248308</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1722275248308</updated>
-    </task>
-    <task id="LOCAL-00043" summary="anpassungen">
-      <option name="closed" value="true" />
-      <created>1722275568547</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1722275568547</updated>
-    </task>
-    <task id="LOCAL-00044" summary="sub menu erlauben">
-      <option name="closed" value="true" />
-      <created>1722327335121</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1722327335121</updated>
-    </task>
-    <task id="LOCAL-00045" summary="sitemap anpassen und blog url system">
-      <option name="closed" value="true" />
-      <created>1722327978156</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1722327978156</updated>
-    </task>
-    <task id="LOCAL-00046" summary="clean up">
-      <option name="closed" value="true" />
-      <created>1722524794448</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1722524794448</updated>
-    </task>
-    <task id="LOCAL-00047" summary="clean up">
-      <option name="closed" value="true" />
-      <created>1722534084462</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1722534084462</updated>
-    </task>
-    <option name="localTasksCounter" value="48" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -657,11 +243,6 @@
     <MESSAGE value="Add Carousel" />
     <MESSAGE value="clean up nav.tsx and page.tsx" />
     <MESSAGE value="submenu fix" />
-    <MESSAGE value="Add backend local" />
-    <MESSAGE value="anpassungen" />
-    <MESSAGE value="sub menu erlauben" />
-    <MESSAGE value="sitemap anpassen und blog url system" />
-    <MESSAGE value="clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="submenu fix" />
   </component>
 </project>
