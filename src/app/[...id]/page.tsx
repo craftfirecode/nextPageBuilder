@@ -9,9 +9,13 @@ async function getData(id: string | number) {
   try {
     // GET PAGE ID
     const requestUrlNav = `${process.env.VITE_STRAPI_API_URL}/api/setting?populate=deep`;
-    const responseUrlNav = await axios.get(requestUrlNav, { headers });
-    const navData = responseUrlNav.data.data.attributes.nav;
+    const responseUrlNav = await fetch(requestUrlNav, { next: { revalidate: 1 }, headers });
+
+    const responseUrlNavData = await responseUrlNav.json();
+
+    const navData = responseUrlNavData.data.attributes.nav;
     console.log('demo', navData[0].submenu);
+
     const mainItem = findObjectByKeyValue(navData, "link", id);
     let getID = mainItem?.page?.data?.id;
 
@@ -28,7 +32,7 @@ async function getData(id: string | number) {
     }
 
     if (!getID) {
-      throw new Error("No valid ID found.");
+      console.error("No valid ID found.");
     }
 
     // GET PAGE
@@ -37,7 +41,6 @@ async function getData(id: string | number) {
     return response.data.data.attributes.cms;
   } catch (error) {
     console.error("Error fetching data:", error);
-    throw error;
   }
 }
 

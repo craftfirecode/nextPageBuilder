@@ -1,7 +1,5 @@
-import axios from "axios";
 import Link from "next/link";
 import React from "react";
-import {PageConfig} from "next";
 
 export const revalidate = 1
 export const fetchCache = "force-no-store"
@@ -30,20 +28,17 @@ async function getData(): Promise<NavData> {
         'Authorization': `Bearer ${process.env.VITE_STRAPI_API_KEY}`
     };
 
-    return fetch(requestUrl, { next: { revalidate: 1 }, headers })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch navigation data');
-            }
-            return response.json();
-        })
-        .then(data => {
-            return data.data.attributes;
-        })
-        .catch(error => {
-            console.error("Error fetching navigation data:", error);
-            throw new Error("Failed to fetch navigation data");
-        });
+    try {
+        const response = await fetch(requestUrl, {next: {revalidate: 1}, headers});
+        if (!response.ok) {
+            throw new Error('Failed to fetch navigation data');
+        }
+        const data = await response.json();
+        return data.data.attributes;
+    } catch (error) {
+        console.error("Error fetching navigation data:", error);
+        throw new Error("Failed to fetch navigation data");
+    }
 }
 
 const Nav = async () => {

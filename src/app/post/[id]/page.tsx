@@ -8,8 +8,9 @@ const headers = {
 async function getData(permalinks: string | number) {
     try {
         const requestUrl = `${process.env.VITE_STRAPI_API_URL}/api/posts?populate=deep&filters[url][$eq]=${permalinks}`;
-        const response = await axios.get(requestUrl, { headers });
-        return response.data.data[0].attributes.cms;
+        const response = await fetch(requestUrl, { next: { revalidate: 1 }, headers });
+        const data = await response.json();
+        return data.data[0].attributes.cms;
     } catch (error) {
         console.error("Error fetching data:", error);
         throw error;
