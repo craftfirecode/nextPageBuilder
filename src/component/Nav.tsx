@@ -1,8 +1,10 @@
 import axios from "axios";
 import Link from "next/link";
 import React from "react";
+import {PageConfig} from "next";
 
 export const revalidate = 1
+export const fetchCache = "force-no-store"
 
 interface NavItem {
     id: number;
@@ -23,6 +25,10 @@ interface NavData {
 }
 
 async function getData(): Promise<NavData> {
+
+    const revalidate = 1
+    const fetchCache = "force-no-store"
+
     const requestUrl = `${process.env.VITE_STRAPI_API_URL}/api/setting?populate=deep`;
     const headers = {
         Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
