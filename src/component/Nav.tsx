@@ -1,7 +1,8 @@
 import axios from "axios";
 import Link from "next/link";
 import React from "react";
-import Head from "next/head";
+
+export const revalidate = 1
 
 interface NavItem {
     id: number;
@@ -29,7 +30,7 @@ async function getData(): Promise<NavData> {
     };
 
     try {
-        const response = await axios.get(requestUrl, { headers });
+        const response = await axios.get(requestUrl, {headers});
         return response.data.data.attributes;
     } catch (error) {
         console.error("Error fetching navigation data:", error);
@@ -41,42 +42,36 @@ const Nav = async () => {
     const data = await getData();
     console.log(data);
     return (
-        <>
-            <Head>
-                <meta httpEquiv="Cache-Control" content="no-store" />
-                <meta httpEquiv="Pragma" content="no-cache" />
-                <meta httpEquiv="Expires" content="0" />
-            </Head>
-            <nav>
-                <Link href="/">
-                    <img className=""
-                         width="45px"
-                         alt=""
-                         src={process.env.VITE_STRAPI_API_URL + data.logo.data.attributes.url}/>
-                    Home
-                </Link>
-                <ul>
-                    {data.nav.map((item: NavItem) => (
-                        <li key={item.id}>
-                            <Link href={"/" + item.link}>
-                                {item.title}
-                            </Link>
-                            {item.submenu && item.submenu.length > 0 && (
-                                <ul>
-                                    {item.submenu.map((subItem: NavItem) => (
-                                        <li key={subItem.id}>
-                                            <Link href={"/" + subItem.link}>
-                                                {subItem.title}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-        </>
+        <nav>
+            <Link href="/">
+                <img className=""
+                     width="45px"
+                     alt=""
+                     src={process.env.VITE_STRAPI_API_URL + data.logo.data.attributes.url}/>
+                Home
+            </Link>
+            <ul>
+                {data.nav.map((item: NavItem) => (
+                    <li key={item.id}>
+                        <Link href={"/" + item.link}>
+                            {item.title}
+                        </Link>
+                        {item.submenu && item.submenu.length > 0 && (
+                            <ul>
+                                {item.submenu.map((subItem: NavItem) => (
+                                    <li key={subItem.id}>
+                                        <Link href={"/" + subItem.link}>
+                                            {subItem.title}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
+                ))}
+            </ul>
+        </nav>
+
 
     );
 };
