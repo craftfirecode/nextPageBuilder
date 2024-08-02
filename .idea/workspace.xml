@@ -6,7 +6,77 @@
   <component name="ChangeListManager">
     <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="clean up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/types/generated/components.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/types/generated/components.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/database.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/middlewares.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/database/migrations/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/jsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/public/uploads/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/admin/app.example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/admin/webpack.config.example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/content-types/author/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/controllers/author.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/routes/author.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/author/services/author.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/content-types/page/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/controllers/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/routes/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/page/services/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/content-types/post/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/controllers/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/routes/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/post/services/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/content-types/setting/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/controllers/setting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/routes/setting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/setting/services/setting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/accordion.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/button.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/carousel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/coin-chart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/content-image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/content.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/disclaimer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/headline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/hero.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/list.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/map.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/margin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/modal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/post-category.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/presale.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/rating.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/screener.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/social.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/cms/v-hero.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/accordion-items.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/carousel-items.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/list-items.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/nav-items.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/items/post-category-list.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/meta/seo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/nav/nav.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/extensions/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/types/generated/components.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/types/generated/contentTypes.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +84,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -36,28 +111,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/vhost/nextPageBuilder/next/src/app/[id]/[id]&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.develop (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.develop (2).executor&quot;: &quot;Run&quot;,
-    &quot;npm.develop.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\vhost\\nextPageBuilder\\next\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "live",
+    "last_opened_file_path": "C:/vhost/nextPageBuilderAPI",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build (1).executor": "Run",
+    "npm.build.executor": "Run",
+    "npm.dev (1).executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.develop (1).executor": "Run",
+    "npm.develop (2).executor": "Run",
+    "npm.develop.executor": "Run",
+    "npm.start.executor": "Run",
+    "ts.external.directory.path": "C:\\vhost\\nextPageBuilder\\next\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\vhost\nextPageBuilder\next\src\app\[id]\[id]" />
@@ -74,7 +149,7 @@
       <recent name="C:\vhost\my-app\src\app\[id]" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.develop (1)">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/next/package.json" />
       <command value="run" />
@@ -127,10 +202,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.develop (1)" />
         <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.develop (2)" />
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.develop" />
       </list>
     </recent_temporary>
@@ -177,6 +252,8 @@
       <workItem from="1722534096980" duration="150000" />
       <workItem from="1722534436610" duration="86000" />
       <workItem from="1722585104815" duration="770000" />
+      <workItem from="1722612257763" duration="1304000" />
+      <workItem from="1722613602448" duration="681000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
