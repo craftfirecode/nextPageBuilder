@@ -25,28 +25,29 @@ interface NavData {
 }
 
 async function getData(): Promise<NavData> {
-
-    const revalidate = 1
-    const fetchCache = "force-no-store"
-
     const requestUrl = `${process.env.VITE_STRAPI_API_URL}/api/setting?populate=deep`;
     const headers = {
-        Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
-        'Cache-Control': 'no-cache, no-store, must-revalidate'
+        'Authorization': `Bearer ${process.env.VITE_STRAPI_API_KEY}`
     };
 
-    try {
-        const response = await axios.get(requestUrl, {headers});
-        return response.data.data.attributes;
-    } catch (error) {
-        console.error("Error fetching navigation data:", error);
-        throw new Error("Failed to fetch navigation data");
-    }
+    return fetch(requestUrl, { next: { revalidate: 1 }, headers })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch navigation data');
+            }
+            return response.json();
+        })
+        .then(data => {
+            return data.data.attributes;
+        })
+        .catch(error => {
+            console.error("Error fetching navigation data:", error);
+            throw new Error("Failed to fetch navigation data");
+        });
 }
 
 const Nav = async () => {
     const data = await getData();
-    console.log(data);
     return (
         <nav>
             <Link href="/">
