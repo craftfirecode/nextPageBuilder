@@ -5,25 +5,35 @@ const headers = {
   Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
 };
 
-async function getData(id: string | number) {
+async function getData(pageLink: string | number): Promise<any> {
   try {
-    // GET PAGE ID
-    const requestUrlNav = `${process.env.VITE_STRAPI_API_URL}/api/setting?populate=deep`;
-    const responseUrlNav = await fetch(requestUrlNav, { next: { revalidate: 1 }, headers });
+    const apiUrl = process.env.VITE_STRAPI_API_URL;
+    if (!apiUrl) {
+      throw new Error("API URL is not defined");
+    }
 
-    const responseUrlNavData = await responseUrlNav.json();
+    // Fetch settings data to get navigation structure
+    const settingsUrl = `${apiUrl}/api/setting?populate=deep`;
+    const settingsResponse = await fetch(settingsUrl, { next: { revalidate: 1 }, headers });
+    if (!settingsResponse.ok) {
+      throw new Error("Failed to fetch settings data");
+    }
 
-    const navData = responseUrlNavData.data.attributes.nav;
+    const settingsData = await settingsResponse.json();
+    const navData = settingsData.data.attributes.nav;
+
     console.log('demo', navData[0].submenu);
 
-    const mainItem = findObjectByKeyValue(navData, "link", id);
-    let getID = mainItem?.page?.data?.id;
+    // Find the main menu item based on the link
+    const mainMenuItem = findObjectByKeyValue(navData, "link", pageLink);
+    let pageId = mainMenuItem?.page?.data?.id;
 
-    if (mainItem && mainItem.submenu) {
-      const submenuItem = findObjectByKeyValue(mainItem.submenu, "link", id);
+    // If the main menu item has a submenu, find the submenu item based on the link
+    if (mainMenuItem && mainMenuItem.submenu) {
+      const submenuItem = findObjectByKeyValue(mainMenuItem.submenu, "link", pageLink);
       if (submenuItem) {
         console.log("submenu");
-        getID = submenuItem.page.data.id;
+        pageId = submenuItem.page.data.id;
       } else {
         console.log("No submenu item found with the specified link.");
       }
@@ -31,20 +41,22 @@ async function getData(id: string | number) {
       console.log("No main menu item found with the specified link or it has no submenu.");
     }
 
-    if (!getID) {
-      console.error("No valid ID found.");
+    if (!pageId) {
+      console.error("No valid page ID found.");
+      return null;
     }
 
-    // GET PAGE
-    const requestUrl = `${process.env.VITE_STRAPI_API_URL}/api/pages/${getID}?populate=deep`;
-    const response = await axios.get(requestUrl, { headers });
-    return response.data.data.attributes.cms;
+    // Fetch the page data using the page ID
+    const pageUrl = `${apiUrl}/api/pages/${pageId}?populate=deep`;
+    const pageResponse = await axios.get(pageUrl, { headers });
+    return pageResponse.data.data.attributes.cms;
   } catch (error) {
     console.error("Error fetching data:", error);
+    return null;
   }
 }
 
-function findObjectByKeyValue(objects: any[], key: string | number, value: string | number) {
+function findObjectByKeyValue(objects: any[], key: string | number, value: string | number): any | null {
   for (const obj of objects) {
     if (searchObject(obj, key, value)) {
       return obj;
@@ -68,10 +80,15 @@ function searchObject(obj: any, key: string | number, value: string | number): b
   return false;
 }
 
-export default async function Home({ params }: { params: { id: [] } }) {
+export default async function Home({ params }: { params: { id: string[] } }) {
   try {
-    console.log(params.id.join('/'))
-    const data = await getData(params.id.join('/'));
+    const pageLink = params.id.join('/');
+    console.log(pageLink);
+    const data = await getData(pageLink);
+
+    if (!data) {
+      throw new Error("No data found");
+    }
 
     return (
         <main className="">
@@ -79,15 +96,16 @@ export default async function Home({ params }: { params: { id: [] } }) {
         </main>
     );
   } catch (error) {
+    console.error("Error in Home component:", error);
     return (
         <main className="">
           <div className="flex items-center justify-center h-screen">
             <div className="text-center">
               <h1 className="text-4xl font-bold">404</h1>
               <p className="text-lg">Die Seite, die du suchst, konnte nicht gefunden werden.</p>
-              <a href="/"
-                 className="mt-4 inline-block px-6 py-2 text-sm font-semibold text-blue-800 bg-blue-100 rounded hover:bg-blue-200">Zurück
-                zur Startseite</a>
+              <a href="/" className="mt-4 inline-block px-6 py-2 text-sm font-semibold text-blue-800 bg-blue-100 rounded hover:bg-blue-200">
+                Zurück zur Startseite
+              </a>
             </div>
           </div>
         </main>

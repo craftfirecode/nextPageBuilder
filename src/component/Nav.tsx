@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-export const revalidate = 1
-export const fetchCache = "force-no-store"
+export const revalidate = 1;
+export const fetchCache = "force-no-store";
 
 interface NavItem {
     id: number;
@@ -22,14 +22,21 @@ interface NavData {
     nav: NavItem[];
 }
 
-async function getData(): Promise<NavData> {
-    const requestUrl = `${process.env.VITE_STRAPI_API_URL}/api/setting?populate=deep`;
+async function fetchNavigationData(): Promise<NavData> {
+    const apiUrl = process.env.VITE_STRAPI_API_URL;
+    const apiKey = process.env.VITE_STRAPI_API_KEY;
+
+    if (!apiUrl || !apiKey) {
+        throw new Error("API URL or API Key is not defined");
+    }
+
+    const requestUrl = `${apiUrl}/api/setting?populate=deep`;
     const headers = {
-        'Authorization': `Bearer ${process.env.VITE_STRAPI_API_KEY}`
+        'Authorization': `Bearer ${apiKey}`
     };
 
     try {
-        const response = await fetch(requestUrl, {next: {revalidate: 1}, headers});
+        const response = await fetch(requestUrl, { next: { revalidate: 1 }, headers });
         if (!response.ok) {
             throw new Error('Failed to fetch navigation data');
         }
@@ -42,28 +49,30 @@ async function getData(): Promise<NavData> {
 }
 
 const Nav = async () => {
-    const data = await getData();
+    const navData = await fetchNavigationData();
     return (
         <nav>
             <Link href="/">
-                <img className=""
-                     width="45px"
-                     alt=""
-                     src={process.env.VITE_STRAPI_API_URL + data.logo.data.attributes.url}/>
+                <img
+                    className=""
+                    width="45px"
+                    alt="Logo"
+                    src={process.env.VITE_STRAPI_API_URL + navData.logo.data.attributes.url}
+                />
                 Home
             </Link>
             <ul>
-                {data.nav.map((item: NavItem) => (
-                    <li key={item.id}>
-                        <Link href={"/" + item.link}>
-                            {item.title}
+                {navData.nav.map((navItem: NavItem) => (
+                    <li key={navItem.id}>
+                        <Link href={"/" + navItem.link}>
+                            {navItem.title}
                         </Link>
-                        {item.submenu && item.submenu.length > 0 && (
+                        {navItem.submenu && navItem.submenu.length > 0 && (
                             <ul>
-                                {item.submenu.map((subItem: NavItem) => (
-                                    <li key={subItem.id}>
-                                        <Link href={"/" + subItem.link}>
-                                            {subItem.title}
+                                {navItem.submenu.map((submenuItem: NavItem) => (
+                                    <li key={submenuItem.id}>
+                                        <Link href={"/" + submenuItem.link}>
+                                            {submenuItem.title}
                                         </Link>
                                     </li>
                                 ))}
@@ -73,8 +82,6 @@ const Nav = async () => {
                 ))}
             </ul>
         </nav>
-
-
     );
 };
 

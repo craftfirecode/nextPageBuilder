@@ -1,6 +1,6 @@
 import Builder from "@/component/Builder";
 
-async function getData(id: string | number): Promise<any> {
+async function getData(pageId: string | number): Promise<any> {
     const apiUrl = process.env.VITE_STRAPI_API_URL;
     const apiKey = process.env.VITE_STRAPI_API_KEY;
 
@@ -13,30 +13,35 @@ async function getData(id: string | number): Promise<any> {
     };
 
     try {
-        // Fetch navigation data
-        const response = await fetch(`${apiUrl}/api/setting?populate=deep`, { next: { revalidate: 1 }, headers });
-        if (!response.ok) {
-            console.error("Failed to fetch navigation data");
+        // Fetch settings data
+        const settingsUrl = `${apiUrl}/api/setting?populate=deep`;
+        const settingsResponse = await fetch(settingsUrl, { next: { revalidate: 1 }, headers });
+        if (!settingsResponse.ok) {
+            console.error("Failed to fetch settings data");
+            return null;
         }
-        const data = await response.json();
+        const settingsData = await settingsResponse.json();
 
-        // Get page ID from navigation data
-        const navData = data.data?.attributes?.indexPage?.data?.id;
-        if (!navData) {
-            console.error("Navigation data does not contain a valid page ID");
+        // Get page ID from settings data
+        const indexPageId = settingsData.data?.attributes?.indexPage?.data?.id;
+        if (!indexPageId) {
+            console.error("Settings data does not contain a valid index page ID");
+            return null;
         }
 
         // Fetch page data using the page ID
-        const responseData = await fetch(`${apiUrl}/api/pages/${navData}?populate=deep`, { next: { revalidate: 1 }, headers });
-        if (!responseData.ok) {
+        const pageUrl = `${apiUrl}/api/pages/${indexPageId}?populate=deep`;
+        const pageResponse = await fetch(pageUrl, { next: { revalidate: 1 }, headers });
+        if (!pageResponse.ok) {
             throw new Error('Failed to fetch page data');
         }
-        const dataPage = await responseData.json();
+        const pageData = await pageResponse.json();
 
         // Return the fetched page data
-        return dataPage.data?.attributes?.cms ?? null;
+        return pageData.data?.attributes?.cms ?? null;
     } catch (error) {
         console.error("Error fetching data:", error);
+        return null;
     }
 }
 
@@ -49,9 +54,9 @@ export default async function Home({ params }: { params: { id: string } }) {
         }
 
         return (
-            <>
+            <main className="">
                 <Builder data={data} />
-            </>
+            </main>
         );
     } catch (error) {
         console.error("Error in Home component:", error);

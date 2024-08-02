@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="test 2">
+    <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="revalidate: 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[...id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[...id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
@@ -152,7 +152,7 @@
       <workItem from="1721992202785" duration="2346000" />
       <workItem from="1721994665173" duration="17000" />
       <workItem from="1722622240216" duration="4104000" />
-      <workItem from="1722629470425" duration="1158000" />
+      <workItem from="1722629470425" duration="1353000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -306,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722626367749</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="revalidate: 1">
+      <option name="closed" value="true" />
+      <created>1722630690372</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1722630690372</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +333,7 @@
     <MESSAGE value="export const revalidate = 3600" />
     <MESSAGE value="test" />
     <MESSAGE value="test 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 2" />
+    <MESSAGE value="revalidate: 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="revalidate: 1" />
   </component>
 </project>

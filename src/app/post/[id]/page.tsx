@@ -5,27 +5,42 @@ const headers = {
     Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
 };
 
-async function getData(permalinks: string | number) {
+async function getData(permalink: string | number): Promise<any> {
     try {
-        const requestUrl = `${process.env.VITE_STRAPI_API_URL}/api/posts?populate=deep&filters[url][$eq]=${permalinks}`;
+        const apiUrl = process.env.VITE_STRAPI_API_URL;
+        if (!apiUrl) {
+            throw new Error("API URL is not defined");
+        }
+
+        const requestUrl = `${apiUrl}/api/posts?populate=deep&filters[url][$eq]=${permalink}`;
         const response = await fetch(requestUrl, { next: { revalidate: 1 }, headers });
-        const data = await response.json();
-        return data.data[0].attributes.cms;
+        if (!response.ok) {
+            throw new Error("Failed to fetch post data");
+        }
+
+        const responseData = await response.json();
+        return responseData.data[0].attributes.cms;
     } catch (error) {
         console.error("Error fetching data:", error);
-        throw error;
+        return null;
     }
 }
 
 export default async function Page({ params }: { params: { id: string } }) {
     try {
         const data = await getData(params.id);
+
+        if (!data) {
+            throw new Error("No data found");
+        }
+
         return (
             <main className="">
                 <Builder data={data} />
             </main>
         );
     } catch (error) {
+        console.error("Error in Page component:", error);
         return (
             <main className="">
                 <div className="flex items-center justify-center h-screen">
