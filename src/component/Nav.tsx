@@ -1,6 +1,7 @@
 import axios from "axios";
 import Link from "next/link";
 import React from "react";
+import Head from "next/head";
 
 interface NavItem {
     id: number;
@@ -40,35 +41,43 @@ const Nav = async () => {
     const data = await getData();
     console.log(data);
     return (
-        <nav>
-            <Link href="/">
-                <img className=""
-                     width="45px"
-                     alt=""
-                     src={process.env.VITE_STRAPI_API_URL + data.logo.data.attributes.url}/>
-                Home
-            </Link>
-            <ul>
-                {data.nav.map((item: NavItem) => (
-                    <li key={item.id}>
-                        <Link href={"/" + item.link}>
-                            {item.title}
-                        </Link>
-                        {item.submenu && item.submenu.length > 0 && (
-                            <ul>
-                                {item.submenu.map((subItem: NavItem) => (
-                                    <li key={subItem.id}>
-                                        <Link href={"/" + subItem.link}>
-                                            {subItem.title}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        <>
+            <Head>
+                <meta httpEquiv="Cache-Control" content="no-store" />
+                <meta httpEquiv="Pragma" content="no-cache" />
+                <meta httpEquiv="Expires" content="0" />
+            </Head>
+            <nav>
+                <Link href="/">
+                    <img className=""
+                         width="45px"
+                         alt=""
+                         src={process.env.VITE_STRAPI_API_URL + data.logo.data.attributes.url}/>
+                    Home
+                </Link>
+                <ul>
+                    {data.nav.map((item: NavItem) => (
+                        <li key={item.id}>
+                            <Link href={"/" + item.link}>
+                                {item.title}
+                            </Link>
+                            {item.submenu && item.submenu.length > 0 && (
+                                <ul>
+                                    {item.submenu.map((subItem: NavItem) => (
+                                        <li key={subItem.id}>
+                                            <Link href={"/" + subItem.link}>
+                                                {subItem.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </>
+
     );
 };
 
