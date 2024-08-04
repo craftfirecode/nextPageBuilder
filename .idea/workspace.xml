@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="web config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Builder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Builder.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/VHeroView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/VHeroView.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,25 +41,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/vhost/nextPageBuilder",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build (1).executor": "Run",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.develop.executor": "Run",
-    "npm.start.executor": "Run",
-    "ts.external.directory.path": "C:\\vhost\\nextPageBuilder\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/vhost/nextPageBuilder&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.develop.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\vhost\\nextPageBuilder\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\vhost\nextPageBuilder" />
@@ -159,7 +158,8 @@
       <workItem from="1722629470425" duration="1353000" />
       <workItem from="1722708636928" duration="92000" />
       <workItem from="1722712517186" duration="357000" />
-      <workItem from="1722760021953" duration="814000" />
+      <workItem from="1722760021953" duration="822000" />
+      <workItem from="1722762261108" duration="191000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -361,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722708724477</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="web config">
+      <option name="closed" value="true" />
+      <created>1722760870350</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1722760870350</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
