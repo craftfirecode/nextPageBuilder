@@ -60,9 +60,9 @@ const VHeroView = (cms: VHeroViewProps) => {
         <div className={vh + " " + "relative"}>
             <div className="absolute top-0 w-full h-full" style={maskBackgroundStyle}></div>
             <div
-                className="absolute left-0 right-0 top-0 bottom-0 flex-col justify-center items-center flex align-items">
+                className="absolute container left-0 right-0 top-0 bottom-0 flex-col justify-center items-center flex align-items">
                 {cms.cms.content && <div className="relative">
-                    <div className="mt-3 relative1">
+                    <div className="mt-3 text-[1px] text-white relative1">
                         {/*<ButtonView cms={cms.cms.button}></ButtonView>*/}
                         <BlocksRenderer
                             content={cms.cms.content}
