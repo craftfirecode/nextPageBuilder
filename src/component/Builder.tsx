@@ -8,6 +8,7 @@ import ContentImageView from "@/component/ContentImageView";
 import HeroView from "@/component/HeroView";
 import PostView from "@/component/PostView";
 import ModalView from "@/component/ModalView";
+import VHeroView from "@/component/VHeroView";
 
 const Builder = (prop: any) => {
     //console.log(prop.data);
@@ -47,6 +48,12 @@ const Builder = (prop: any) => {
                 return (
                     <div className="my-3">
                         <ContentImageView cms={component}/>
+                    </div>
+                );
+            case 'cms.v-hero':
+                return (
+                    <div className="my-3">
+                        <VHeroView cms={component}/>
                     </div>
                 );
             case 'cms.button':

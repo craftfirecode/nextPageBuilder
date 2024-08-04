@@ -1,3 +1,4 @@
+"use client"
 import {useEffect, useState} from 'react';
 import ButtonView from "./ButtonView";
 import {BlocksRenderer} from "@strapi/blocks-react-renderer";
@@ -30,7 +31,7 @@ const VHeroView = (cms: VHeroViewProps) => {
     const [link, setLink] = useState("");
 
     const maskBackgroundStyle = {
-        backgroundImage: `url(${process.env.VITE_STRAPI_API_URL}${cms.cms.mask?.data?.attributes.url || ''})`,
+        backgroundImage: `url(${process.env.VITE_STRAPI_API_URL}/api${cms.cms.mask?.data?.attributes.url || ''})`,
     };
 
     useEffect(() => {
@@ -44,7 +45,7 @@ const VHeroView = (cms: VHeroViewProps) => {
         }
 
         if (cms.cms.file.data !== null) {
-            setLink(process.env.VITE_STRAPI_API_URL + '' + cms.cms.file.data.attributes.url);
+            setLink('http://localhost:1337' + cms.cms.file.data.attributes.url);
         }
     }, [cms.cms]);
 
