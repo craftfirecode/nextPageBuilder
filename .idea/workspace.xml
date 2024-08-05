@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="552f4a6e-3944-4e32-beff-8aaec858ac5c" name="Changes" comment="web config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/VHeroView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/VHeroView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/HeroView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/HeroView.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +160,7 @@
       <workItem from="1722712517186" duration="357000" />
       <workItem from="1722760021953" duration="822000" />
       <workItem from="1722762261108" duration="191000" />
+      <workItem from="1722859503374" duration="763000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -369,7 +370,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722760870350</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="web config">
+      <option name="closed" value="true" />
+      <created>1722776822745</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1722776822745</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
