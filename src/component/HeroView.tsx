@@ -1,5 +1,6 @@
 import RichText from "@/component/RichText";
 import ButtonView from "@/component/ButtonView";
+import {cn} from "@/lib/utils";
 
 type HeroViewProps = {
     cms: {
@@ -20,33 +21,33 @@ type HeroViewProps = {
 
 const HeroView = (cms: HeroViewProps) => {
     const backgroundStyle: any = {
-        backgroundImage: `url(${process.env.VITE_STRAPI_API_URL} + ${cms.cms.img?.data?.attributes.url || ''})`,
+        backgroundImage: `url(${process.env.VITE_STRAPI_API_URL}${cms.cms.img?.data?.attributes.url || ''})`,
     };
 
     let vh: any;
 
     switch (cms.cms.vh) {
         case 'vh-25':
-            vh = 'h-[25vh]';
+            vh = 'min-h-[25vh]';
             break;
         case 'vh-50':
-            vh = 'h-[50vh]';
+            vh = 'min-h-[50vh]';
             break;
         case 'vh-75':
-            vh = 'h-[75vh]';
+            vh = 'min-h-[75vh]';
             break;
-        case 'vh-105':
-            vh = 'h-[100vh]';
+        case 'vh-100':
+            vh = 'min-h-[100vh]';
             break;
         default:
-            vh = 'h-[25vh]';
+            vh = 'min-h-[25vh]';
             break;
     }
 
     return (
         <div className={`hero bg-cover bg-center ${cms.cms.vh}`} style={backgroundStyle}>
-            <div className={"" + " " + vh}>
-                <div className="flex h-[100%] flex-col justify-center items-center">
+            <div className={cn("flex flex-col justify-center items-center", vh)}>
+                <div className="">
                     {cms.cms.content && <RichText content={cms.cms.content}></RichText>}
                     {cms.cms.button &&
                         <div className="w-auto mt-3">

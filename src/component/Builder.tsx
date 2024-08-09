@@ -8,62 +8,77 @@ import ContentImageView from "@/component/ContentImageView";
 import HeroView from "@/component/HeroView";
 import PostView from "@/component/PostView";
 import ModalView from "@/component/ModalView";
+import VHeroView from "@/component/VHeroView";
+import Image from "next/image";
+import ImageGrid from "@/component/ImageGrid";
 
 const Builder = (prop: any) => {
-    //console.log(prop.data);
+    // console.log(prop.data);
     const renderComponent = (component: any) => {
         switch (component.__component) {
             case 'cms.accordion':
                 return (
-                    <div className="my-3">
+                    <div className="">
                         <AccordionView cms={component}/>
                     </div>
                 );
             case 'cms.headline':
                 return (
-                    <div className="my-3">
+                    <div className="">
                         <HeadlineView cms={component}/>
                     </div>
                 );
             case 'cms.modal':
                 return (
-                    <div className="my-3">
+                    <div className="">
                         <ModalView cms={component}/>
                     </div>
                 );
             case 'cms.carousel':
                 return (
-                    <div className="my-3">
+                    <div className="">
                         <CarouselView cms={component.carousel}/>
+                    </div>
+                );
+            case 'cms.image-grid':
+                return (
+                    <div className="">
+                        <ImageGrid cms={component}/>
                     </div>
                 );
             case 'cms.content':
                 return (
-                    <div className="my-3">
+                    <div className="">
                         <ContentView cms={component}/>
                     </div>
                 );
             case 'cms.content-image':
                 return (
-                    <div className="my-3">
+                    <div className="">
                         <ContentImageView cms={component}/>
+                    </div>
+                );
+            case 'cms.v-hero':
+                return (
+                    <div className="">
+                        <VHeroView cms={component}/>
                     </div>
                 );
             case 'cms.button':
                 return (
-                    <div className="my-3">
+                    <div className="">
                         <ButtonView cms={component}/>
                     </div>
                 );
             case 'cms.post-category':
                 return (
-                    <div className="my-3">
+                    <div className="">
                         <PostView cms={component}/>
                     </div>
                 );
             case 'cms.hero':
                 return (
-                    <div className="my-3">
+                    <div className="">
                         <HeroView cms={component}/>
                     </div>
                 );

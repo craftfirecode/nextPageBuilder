@@ -1,8 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
-export const revalidate = 1;
-export const fetchCache = "force-no-store";
+import * as Menubar from '@radix-ui/react-menubar';
 
 interface NavItem {
     id: number;
@@ -36,7 +34,7 @@ async function fetchNavigationData(): Promise<NavData> {
     };
 
     try {
-        const response = await fetch(requestUrl, { next: { revalidate: 1 }, headers });
+        const response = await fetch(requestUrl, { headers });
         if (!response.ok) {
             throw new Error('Failed to fetch navigation data');
         }
@@ -51,36 +49,45 @@ async function fetchNavigationData(): Promise<NavData> {
 const Nav = async () => {
     const navData = await fetchNavigationData();
     return (
-        <nav>
+        <nav className="flex items-center gap-4 py-2 border-b">
             <Link href="/">
                 <img
-                    className=""
                     width="45px"
                     alt="Logo"
                     src={process.env.VITE_STRAPI_API_URL + navData.logo.data.attributes.url}
                 />
-                Home
             </Link>
-            <ul>
-                {navData.nav.map((navItem: NavItem) => (
-                    <li key={navItem.id}>
-                        <Link href={"/" + navItem.link}>
-                            {navItem.title}
-                        </Link>
-                        {navItem.submenu && navItem.submenu.length > 0 && (
-                            <ul>
-                                {navItem.submenu.map((submenuItem: NavItem) => (
-                                    <li key={submenuItem.id}>
-                                        <Link href={"/" + submenuItem.link}>
-                                            {submenuItem.title}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                    </li>
-                ))}
-            </ul>
+            {navData.nav.map((navItem: NavItem) => (
+                <div key={navItem.id}>
+                    {navItem.submenu && navItem.submenu.length > 0 ? (
+                        <Menubar.Root>
+                            <Menubar.Menu>
+                                <Menubar.Trigger >
+                                  {navItem.title}
+                                </Menubar.Trigger>
+                                <Menubar.Portal>
+                                    <Menubar.Content
+                                        className="bg-white shadow border p-2 min-w-[220px]"
+                                        align="start"
+                                        sideOffset={5}
+                                        alignOffset={-3}>
+                                        {navItem.submenu.map((submenuItem: NavItem) => (
+                                            <Menubar.Item key={submenuItem.id} asChild>
+                                                <Link href={"/" + submenuItem.link}>
+                                                    {submenuItem.title}
+                                                </Link>
+                                            </Menubar.Item>
+                                        ))}
+                                    </Menubar.Content>
+                                </Menubar.Portal>
+
+                            </Menubar.Menu>
+                        </Menubar.Root>
+                    ) : (
+                        <Link href={"/" + navItem.link}>{navItem.title}</Link>
+                    )}
+                </div>
+            ))}
         </nav>
     );
 };
