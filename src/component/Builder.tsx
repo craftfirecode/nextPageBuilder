@@ -9,12 +9,14 @@ import HeroView from "@/component/HeroView";
 import PostView from "@/component/PostView";
 import ModalView from "@/component/ModalView";
 import VHeroView from "@/component/VHeroView";
+import Image from "next/image";
+import ImageGrid from "@/component/ImageGrid";
 
 const Builder = (prop: any) => {
-    //console.log(prop.data);
+    // console.log(prop.data);
     const renderComponent = (component: any) => {
         switch (component.__component) {
-            case 'cms.accordion':1
+            case 'cms.accordion':
                 return (
                     <div className="">
                         <AccordionView cms={component}/>
@@ -36,6 +38,12 @@ const Builder = (prop: any) => {
                 return (
                     <div className="">
                         <CarouselView cms={component.carousel}/>
+                    </div>
+                );
+            case 'cms.image-grid':
+                return (
+                    <div className="">
+                        <ImageGrid cms={component}/>
                     </div>
                 );
             case 'cms.content':
