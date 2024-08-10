@@ -1,6 +1,6 @@
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 import Nav from "@/component/Nav";
 import ClientWrapper from "@/component/ClientWrapper";
 import {cn} from "@/lib/utils";

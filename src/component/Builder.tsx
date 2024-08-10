@@ -11,6 +11,7 @@ import ModalView from "@/component/ModalView";
 import VHeroView from "@/component/VHeroView";
 import Image from "next/image";
 import ImageGrid from "@/component/ImageGrid";
+import MarginView from "@/component/MarginView";
 
 const Builder = (prop: any) => {
     // console.log(prop.data);
@@ -20,6 +21,12 @@ const Builder = (prop: any) => {
                 return (
                     <div className="">
                         <AccordionView cms={component}/>
+                    </div>
+                );
+            case 'cms.margin':
+                return (
+                    <div className="">
+                        <MarginView cms={component}/>
                     </div>
                 );
             case 'cms.headline':

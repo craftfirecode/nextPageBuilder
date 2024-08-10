@@ -48,3 +48,20 @@ body {
     }
   }
 }
+
+$sizes: 15, 20, 30, 45, 50;
+
+@each $size in $sizes {
+  .mt-static-#{$size} {
+    margin-top: $size+px;
+  }
+  .mb-static-#{$size} {
+    margin-bottom: $size+px;
+  }
+  .pt-static-#{$size} {
+    padding-top: $size+px;
+  }
+  .pb-static-#{$size} {
+    padding-bottom: $size+px;
+  }
+}

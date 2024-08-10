@@ -10,7 +10,6 @@ const ImageGrid = ({ cms }: any) => {
                     </div>
                 ))}
             </div>
-            <h1>Image Grid</h1>
         </div>
     );
 }

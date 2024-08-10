@@ -22,7 +22,7 @@ async function getData(filterName: string) {
 }
 
 async function PostView(cms: PostViewProps) {
-    console.log(cms);
+    // console.log(cms);
     const data: [] = await getData(cms.cms.category.categoryList);
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
