@@ -1,17 +1,23 @@
+import React from 'react';
+
 const ImageGrid = ({ cms }: any) => {
     const { data } = cms.images;
 
     return (
-        <div>
-            <div className="grid grid-cols-3 gap-4">
-                {data.map((item: any, index: number) => (
-                    <div key={index} className="">
-                        <img src={process.env.VITE_STRAPI_API_URL + item.attributes.url} alt="Grid Image" />
+        <div className="flex flex-wrap -mx-2">
+            {data.map((item: any, index: number) => {
+                const rowCapacity = 3;
+                const itemsInRow = Math.min(data.length - Math.floor(index / rowCapacity) * rowCapacity, rowCapacity);
+                const widthClass = itemsInRow === 1 ? 'w-full' : (itemsInRow === 2 ? 'w-1/2' : 'w-1/3');
+
+                return (
+                    <div key={index} className={`${widthClass} px-2 mb-4`}>
+                        <img src={`${process.env.VITE_STRAPI_API_URL}${item.attributes.url}`} alt="Grid Image" className="w-full h-auto" />
                     </div>
-                ))}
-            </div>
+                );
+            })}
         </div>
     );
-}
+};
 
 export default ImageGrid;
