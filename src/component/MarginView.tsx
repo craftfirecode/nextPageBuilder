@@ -11,7 +11,6 @@ type MarginViewProps = {
 const MarginView = (cms: MarginViewProps) => {
     const classNamesArray = [cms.cms.mt, cms.cms.mb, cms.cms.pt, cms.cms.pb];
     const classNames = classNamesArray.filter(className => !!className).join(' ');
-    console.log(cms)
     if (!classNames.trim()) {
         return null;
     }
