@@ -2,8 +2,9 @@ import Link from "next/link";
 import React from "react";
 import * as Menubar from '@radix-ui/react-menubar';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@radix-ui/react-accordion";
-import {ChevronDownIcon, HamburgerMenuIcon} from "@radix-ui/react-icons";
+import {ChevronDownIcon, HamburgerMenuIcon, MobileIcon} from "@radix-ui/react-icons";
 import {Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger} from "@/component/Sheet";
+import MobileMenu from "@/component/MobileMenu";
 
 interface NavItem {
     id: number;
@@ -104,43 +105,7 @@ const Nav = async () => {
                         src={process.env.VITE_STRAPI_API_URL + navData.logo.data.attributes.url}
                     />
                 </Link>
-                <Sheet>
-                    <SheetTrigger>
-                        <HamburgerMenuIcon />
-                    </SheetTrigger>
-                    <SheetContent className="pt-2">
-                        <SheetHeader>
-                            <SheetTitle>CraftFire Design</SheetTitle>
-                            <SheetDescription>
-                                {navData.nav.map((navItem: NavItem) => (
-                                    <div key={navItem.id} className="mb-3">
-                                        {navItem.submenu && navItem.submenu.length > 0 ? (
-                                            <Accordion type="single" collapsible className="">
-                                                <AccordionItem key={navItem.id} value={`item-${navItem.id}`}>
-                                                    <AccordionTrigger className="AccordionTrigger w-full justify-between flex items-center">
-                                                        <span>Trigger text</span>
-                                                        <ChevronDownIcon className="AccordionChevron" aria-hidden />
-                                                    </AccordionTrigger>
-                                                    <AccordionContent className="bg-green-50">
-                                                        {navItem.submenu?.map((submenuItem: NavItem, index: number) => (
-                                                            <div className="py-3 px-2" key={index}>
-                                                                <Link key={submenuItem.id} href={"/" + submenuItem.link}>
-                                                                    {submenuItem.title}
-                                                                </Link>
-                                                            </div>
-                                                        ))}
-                                                    </AccordionContent>
-                                                </AccordionItem>
-                                            </Accordion>
-                                        ) : (
-                                            <Link href={"/" + navItem.link}>{navItem.title}</Link>
-                                        )}
-                                    </div>
-                                ))}
-                            </SheetDescription>
-                        </SheetHeader>
-                    </SheetContent>
-                </Sheet>
+                <MobileMenu navData={navData} />
             </nav>
         </>
     );
