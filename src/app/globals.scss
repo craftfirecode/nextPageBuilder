@@ -65,3 +65,7 @@ $sizes: 15, 20, 30, 45, 50;
     padding-bottom: $size+px;
   }
 }
+
+.AccordionTrigger[data-state='open'] > .AccordionChevron {
+  transform: rotate(180deg);
+}

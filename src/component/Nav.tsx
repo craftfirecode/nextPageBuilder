@@ -108,16 +108,11 @@ const Nav = async () => {
                         {navItem.submenu && navItem.submenu.length > 0 ? (
                             <Accordion type="single" collapsible className="w-full">
                                 <AccordionItem key={navItem.id} value={`item-${navItem.id}`}>
-                                    <AccordionTrigger>
-                                        {navItem.title}
-                                        <ChevronDownIcon
-                                            className="transition-transform duration-300 group-data-[state=open]:rotate-180"
-                                            aria-hidden
-                                        />
+                                    <AccordionTrigger className="AccordionTrigger">
+                                        <span>Trigger text</span>
+                                        <ChevronDownIcon className="AccordionChevron" aria-hidden />
                                     </AccordionTrigger>
-                                    <AccordionContent
-                                    className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden text-[15px]',
-">
+                                    <AccordionContent>
                                         {navItem.submenu?.map((submenuItem: NavItem, index: number) => (
                                             <div key={index}>
                                                 <Link key={submenuItem.id} href={"/" + submenuItem.link}>
