@@ -56,10 +56,10 @@ const MobileMenu = ({navData}:  any) => {
                                                         <span>Trigger text</span>
                                                         <ChevronDownIcon className="AccordionChevron" aria-hidden />
                                                     </AccordionTrigger>
-                                                    <AccordionContent className="bg-green-50">
+                                                    <AccordionContent className="bg-stone-50">
                                                         {navItem.submenu?.map((submenuItem: NavItem, index: number) => (
                                                             <div className="py-3 px-2" key={index}>
-                                                                <Link onClick={() => setOpen(false)} key={submenuItem.id} href={"/" + submenuItem.link}>
+                                                                <Link className="flex w-100" onClick={() => setOpen(false)} key={submenuItem.id} href={"/" + submenuItem.link}>
                                                                     {submenuItem.title}
                                                                 </Link>
                                                             </div>
