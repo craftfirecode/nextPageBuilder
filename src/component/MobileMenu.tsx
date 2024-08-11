@@ -48,7 +48,7 @@ const MobileMenu = ({navData}:  any) => {
                             <SheetTitle>CraftFire Design</SheetTitle>
                             <SheetDescription>
                                 {navData.nav.map((navItem: NavItem) => (
-                                    <div key={navItem.id} className="mb-3">
+                                    <div key={navItem.id} className="mb-3 ">
                                         {navItem.submenu && navItem.submenu.length > 0 ? (
                                             <Accordion type="single" collapsible className="">
                                                 <AccordionItem key={navItem.id} value={`item-${navItem.id}`}>
@@ -68,7 +68,7 @@ const MobileMenu = ({navData}:  any) => {
                                                 </AccordionItem>
                                             </Accordion>
                                         ) : (
-                                            <Link onClick={() => setOpen(false)} href={"/" + navItem.link}>{navItem.title}</Link>
+                                            <Link className="flex w-100" onClick={() => setOpen(false)} href={"/" + navItem.link}>{navItem.title}</Link>
                                         )}
                                     </div>
                                 ))}

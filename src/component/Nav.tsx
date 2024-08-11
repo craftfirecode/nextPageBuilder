@@ -80,9 +80,11 @@ const Nav = async () => {
                                             alignOffset={-3}>
                                             {navItem.submenu.map((submenuItem: NavItem) => (
                                                 <Menubar.Item key={submenuItem.id} asChild>
-                                                    <Link href={"/" + submenuItem.link}>
-                                                        {submenuItem.title}
-                                                    </Link>
+                                                    <div>
+                                                        <Link className="flex w-100" href={"/" + submenuItem.link}>
+                                                            {submenuItem.title}
+                                                        </Link>
+                                                    </div>
                                                 </Menubar.Item>
                                             ))}
                                         </Menubar.Content>
