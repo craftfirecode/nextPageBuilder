@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import * as Menubar from '@radix-ui/react-menubar';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@radix-ui/react-accordion";
+import {ChevronDownIcon} from "@radix-ui/react-icons";
 
 interface NavItem {
     id: number;
@@ -45,50 +47,102 @@ async function fetchNavigationData(): Promise<NavData> {
         throw new Error("Failed to fetch navigation data");
     }
 }
-
 const Nav = async () => {
     const navData = await fetchNavigationData();
     return (
-        <nav className="flex items-center gap-4 py-2 border-b">
-            <Link href="/">
-                <img
-                    width="45px"
-                    alt="Logo"
-                    src={process.env.VITE_STRAPI_API_URL + navData.logo.data.attributes.url}
-                />
-            </Link>
-            {navData.nav.map((navItem: NavItem) => (
-                <div key={navItem.id}>
-                    {navItem.submenu && navItem.submenu.length > 0 ? (
-                        <Menubar.Root>
-                            <Menubar.Menu>
-                                <Menubar.Trigger >
-                                  {navItem.title}
-                                </Menubar.Trigger>
-                                <Menubar.Portal>
-                                    <Menubar.Content
-                                        className="bg-white shadow border p-2 min-w-[220px]"
-                                        align="start"
-                                        sideOffset={5}
-                                        alignOffset={-3}>
-                                        {navItem.submenu.map((submenuItem: NavItem) => (
-                                            <Menubar.Item key={submenuItem.id} asChild>
-                                                <Link href={"/" + submenuItem.link}>
+        <>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-4 py-2 border-b">
+                {/* Logo */}
+                <Link href="/">
+                    <img
+                        width="45px"
+                        alt="Logo"
+                        src={process.env.VITE_STRAPI_API_URL + navData.logo.data.attributes.url}
+                    />
+                </Link>
+                {/* Navigation Items */}
+                {navData.nav.map((navItem: NavItem) => (
+                    <div key={navItem.id}>
+                        {navItem.submenu && navItem.submenu.length > 0 ? (
+                            <Menubar.Root>
+                                <Menubar.Menu>
+                                    <Menubar.Trigger>
+                                        {navItem.title}
+                                    </Menubar.Trigger>
+                                    <Menubar.Portal>
+                                        <Menubar.Content
+                                            className="bg-white shadow border p-2 min-w-[220px]"
+                                            align="start"
+                                            sideOffset={5}
+                                            alignOffset={-3}>
+                                            {navItem.submenu.map((submenuItem: NavItem) => (
+                                                <Menubar.Item key={submenuItem.id} asChild>
+                                                    <Link href={"/" + submenuItem.link}>
+                                                        {submenuItem.title}
+                                                    </Link>
+                                                </Menubar.Item>
+                                            ))}
+                                        </Menubar.Content>
+                                    </Menubar.Portal>
+                                </Menubar.Menu>
+                            </Menubar.Root>
+                        ) : (
+                            <Link href={"/" + navItem.link}>{navItem.title}</Link>
+                        )}
+                    </div>
+                ))}
+            </nav>
+            {/* Mobile Navigation */}
+            <nav className="md:hidden flex items-center gap-4 py-2 border-b">
+                {/* Logo */}
+                <Link href="/">
+                    <img
+                        width="45px"
+                        alt="Logo"
+                        src={process.env.VITE_STRAPI_API_URL + navData.logo.data.attributes.url}
+                    />
+                </Link>
+                {navData.nav.map((navItem: NavItem) => (
+                    <div key={navItem.id}>
+                        {navItem.submenu && navItem.submenu.length > 0 ? (
+                            <Accordion type="single" collapsible className="w-full">
+                                <AccordionItem key={navItem.id} value={`item-${navItem.id}`}>
+                                    <AccordionTrigger>
+                                        {navItem.title}
+                                        <ChevronDownIcon
+                                            className="transition-transform duration-300 group-data-[state=open]:rotate-180"
+                                            aria-hidden
+                                        />
+                                    </AccordionTrigger>
+                                    <AccordionContent
+                                    className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden text-[15px]',
+">
+                                        {navItem.submenu?.map((submenuItem: NavItem, index: number) => (
+                                            <div key={index}>
+                                                <Link key={submenuItem.id} href={"/" + submenuItem.link}>
                                                     {submenuItem.title}
                                                 </Link>
-                                            </Menubar.Item>
+                                            </div>
                                         ))}
-                                    </Menubar.Content>
-                                </Menubar.Portal>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+                        ) : (
+                            <Link href={"/" + navItem.link}>{navItem.title}</Link>
+                        )}
+                    </div>
+                ))}
 
-                            </Menubar.Menu>
-                        </Menubar.Root>
-                    ) : (
-                        <Link href={"/" + navItem.link}>{navItem.title}</Link>
-                    )}
-                </div>
-            ))}
-        </nav>
+
+
+
+
+
+
+
+            </nav>
+        </>
     );
 };
 
