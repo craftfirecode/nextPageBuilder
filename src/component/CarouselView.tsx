@@ -20,13 +20,11 @@ export const CarouselView: React.FC<CarouselViewProps> = ({ cms }) => {
             <CarouselContent>
                 {cms.map((item: { img: { data: { attributes: { url: string; }; }; }; }, index: number) => (
                     <CarouselItem key={index}>
-                        <Image
+                        <img
                             title="slider"
                             alt="slider"
-                            src={process.env.VITE_STRAPI_API_URL + "/" + item.img.data.attributes.url}
-                            layout="responsive"
-                            width={100}
-                            height={475}
+                            src={process.env.VITE_STRAPI_API_URL + "" + item.img.data.attributes.url}
+                            width="100%"
                         />
                     </CarouselItem>
                 ))}
