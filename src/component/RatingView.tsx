@@ -40,9 +40,6 @@ const RatingView = ({cms}: RatingProps) => {
     return (
         <div className="py-3 my-5 border-y">
             <h4 className="mb-2">Bewertung</h4>
-            <div className="mb-2">
-                <small>Die von uns vorgenommene Bewertung eines Meme-Coins spiegelt lediglich unsere Einschätzung und Meinung zu dessen aktuellem Stand und Potenzial wider. Es ist wichtig zu betonen, dass dies nicht als Aufforderung zum Kauf oder Verkauf der besprochenen digitalen Währung interpretiert werden sollte.</small>
-            </div>
             <div>
                 <div className="flex items-center"><div className="me-2">Community</div> {renderStars(cms.communityRating)}</div>
             </div>
