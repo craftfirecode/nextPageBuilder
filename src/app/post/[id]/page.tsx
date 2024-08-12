@@ -1,5 +1,6 @@
 import axios from "axios";
 import Builder from "@/component/Builder";
+import Author from "@/component/Author";
 
 const headers = {
     Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
@@ -19,7 +20,7 @@ async function getData(permalink: string | number): Promise<any> {
         }
 
         const responseData = await response.json();
-        return responseData.data[0].attributes.cms;
+        return responseData.data[0].attributes;
     } catch (error) {
         console.error("Error fetching data:", error);
         return null;
@@ -29,14 +30,14 @@ async function getData(permalink: string | number): Promise<any> {
 export default async function Page({ params }: { params: { id: string } }) {
     try {
         const data = await getData(params.id);
-
         if (!data) {
             throw new Error("No data found");
         }
 
         return (
             <main className="">
-                <Builder data={data} />
+                <Builder data={data.cms} />
+                <Author data={data.author.data.attributes} />
             </main>
         );
     } catch (error) {
