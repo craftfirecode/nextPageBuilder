@@ -25,6 +25,9 @@ const config: Config = {
       '2xl': '1536px',
     },
     extend: {
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif'],
+      },
       keyframes: {
         slideDown: {
           from: { height: '0px' },
