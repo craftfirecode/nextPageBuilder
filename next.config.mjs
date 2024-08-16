@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['headless.mapztour.de'],
+        domains: ['localhost','headless.mapztour.de'],
     },
 };
 

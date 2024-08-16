@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const ImageGrid = ({ cms }: any) => {
     const { data } = cms.images;
@@ -12,7 +13,13 @@ const ImageGrid = ({ cms }: any) => {
 
                 return (
                     <div key={index} className={`${widthClass} px-2 mb-4`}>
-                        <img src={`${process.env.VITE_STRAPI_API_URL}${item.attributes.url}`} alt="Grid Image" className="w-full h-auto" />
+                        <Image 
+                            src={`${process.env.VITE_STRAPI_API_URL}${item.attributes.url}`} 
+                            alt="Grid Image" 
+                            width={500} 
+                            height={500} 
+                            className="w-full h-auto" 
+                        />
                     </div>
                 );
             })}
