@@ -53,7 +53,7 @@ const MobileMenu = ({navData}:  any) => {
                                             <Accordion type="single" collapsible className="">
                                                 <AccordionItem key={navItem.id} value={`item-${navItem.id}`}>
                                                     <AccordionTrigger className="AccordionTrigger w-full justify-between flex items-center">
-                                                        <span>Trigger text</span>
+                                                        {navItem.title}
                                                         <ChevronDownIcon className="AccordionChevron" aria-hidden />
                                                     </AccordionTrigger>
                                                     <AccordionContent className="bg-stone-50">
