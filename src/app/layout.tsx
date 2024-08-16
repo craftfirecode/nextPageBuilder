@@ -4,6 +4,7 @@ import "./globals.scss";
 import Nav from "@/component/Nav";
 import ClientWrapper from "@/component/ClientWrapper";
 import {cn} from "@/lib/utils";
+import Footer from "@/component/Footer";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -20,6 +21,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
         <ClientWrapper>
             {children}
         </ClientWrapper>
+        <Footer/>
         </body>
         </html>
     );

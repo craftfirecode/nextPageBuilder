@@ -8,6 +8,7 @@ interface NavItem {
   id: number;
   title: string;
   link: string;
+  hidden?: boolean;
   submenu?: NavItem[];
 }
 
@@ -55,7 +56,7 @@ const DesktopMenu = ({ navData }: any) => {
                         <Menubar.Item key={submenuItem.id} asChild>
                           <Link
                             className="flex w-100"
-                            href={"/" + submenuItem.link}
+                            href={"/" + submenuItem.link} 
                           >
                             {submenuItem.title}
                           </Link>
@@ -66,7 +67,7 @@ const DesktopMenu = ({ navData }: any) => {
                 </Menubar.Menu>
               </Menubar.Root>
             ) : (
-              <Link href={"/" + navItem.link}>{navItem.title}</Link>
+              !navItem.hidden ? <Link href={"/" + navItem.link}>{navItem.title}</Link> : null
             )}
           </div>
         ))}
