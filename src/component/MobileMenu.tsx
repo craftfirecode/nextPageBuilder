@@ -20,6 +20,7 @@ interface NavItem {
     title: string;
     link: string;
     submenu?: NavItem[];
+    hidden?: boolean;
 }
 
 interface NavData {
@@ -68,7 +69,7 @@ const MobileMenu = ({navData}:  any) => {
                                                 </AccordionItem>
                                             </Accordion>
                                         ) : (
-                                            <Link className="flex w-100" onClick={() => setOpen(false)} href={"/" + navItem.link}>{navItem.title}</Link>
+                                            !navItem.hidden ? <Link className="flex w-100" onClick={() => setOpen(false)} href={"/" + navItem.link}>{navItem.title}</Link> : null
                                         )}
                                     </div>
                                 ))}
