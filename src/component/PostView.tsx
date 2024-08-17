@@ -32,7 +32,7 @@ async function PostView(cms: PostViewProps) {
                          className="w-full h-48 object-cover"
                          alt="..."/>
                     <div className="p-4">
-                        <h4 className="text-lg font-semibold mb-2">{item.attributes.title}</h4>
+                        <h6 className="">{item.attributes.title}</h6>
                         <p className="text-gray-600">{item.attributes.description}</p>
                         <Link href={'/post/' + item.attributes.url}>
                             <CnButton className="mt-3">
