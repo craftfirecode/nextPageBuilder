@@ -55,18 +55,6 @@ export default async function Home({ params }: { params: { id: string } }) {
 
         return (
             <main className="">
-                http://preview.themeforest.net/item/zminimal-minimalist-blog-theme-for-creatives/full_screen_preview/17912115?_ga=2.53953192.1462965569.1723721957-634365737.1721466897&_gac=1.27842254.1721466897.Cj0KCQjwwO20BhCJARIsAAnTIVRi4cowRxRcZ-urE52uDvjQgHlutsQQBw15tCA246D_oDHf7ZVx_UYaAh89EALw_wcB
-              <div className="font-raleway">
-      <p className=" font-thin">Raleway Thin (100)</p>
-      <p className=" font-extralight">Raleway ExtraLight (200)</p>
-      <p className="font-light">Raleway Light (300)</p>
-      <p className="font-normal">Raleway Regular (400)</p>
-      <p className="font-medium">Raleway Medium (500)</p>
-      <p className="font-semibold">Raleway SemiBold (600)</p>
-      <p className="font-bold">Raleway Bold (700)</p>
-      <p className="font-extrabold">Raleway ExtraBold (800)</p>
-      <p className="font-black">Raleway Black (900)</p>
-    </div>
                 <Builder data={data} />
             </main>
         );
