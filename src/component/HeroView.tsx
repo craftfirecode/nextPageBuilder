@@ -46,7 +46,7 @@ const HeroView = (cms: HeroViewProps) => {
 
     return (
         <div className={`hero bg-cover bg-center ${cms.cms.vh}`} style={backgroundStyle}>
-            <div className={cn("flex flex-col justify-center items-center", vh)}>
+            <div className={cn("flex container flex-col justify-center items-center", vh)}>
                 <div className="">
                     {cms.cms.content && <RichText content={cms.cms.content}></RichText>}
                     {cms.cms.button &&

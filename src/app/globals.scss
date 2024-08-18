@@ -135,3 +135,9 @@ $sizes: 15, 20, 30, 45, 50;
 .AccordionTrigger[data-state='open'] > .AccordionChevron {
   transform: rotate(180deg);
 }
+
+ol, ul {
+  list-style: inherit;
+  margin: revert;
+  padding: revert;
+}
