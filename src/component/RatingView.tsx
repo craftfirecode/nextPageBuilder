@@ -1,14 +1,14 @@
 interface RatingProps {
     cms: {
-        communityRating: number;
-        vertrauenRating: number;
-        markttrendRating: number;
+        rating0: number;
+        rating1: number;
+        rating2: number;
     };
 }
 
 const RatingView = ({cms}: RatingProps) => {
     const calculateAverageRating = () => {
-        const totalRatings = cms.communityRating + cms.vertrauenRating + cms.markttrendRating;
+        const totalRatings = cms.rating0 + cms.rating1 + cms.rating2;
         const averageRating = totalRatings / 3;
         return averageRating.toFixed(1);
     };
@@ -41,13 +41,13 @@ const RatingView = ({cms}: RatingProps) => {
         <div className="py-3 my-5 border-y">
             <h4 className="mb-2">Bewertung</h4>
             <div>
-                <div className="flex items-center"><div className="me-2">Community</div> {renderStars(cms.communityRating)}</div>
+                <div className="flex items-center"><div className="me-2">Community</div> {renderStars(cms.rating0)}</div>
             </div>
             <div>
-                <div className="flex items-center"><div className="me-2">Vertrauenswürdig</div> {renderStars(cms.vertrauenRating)}</div>
+                <div className="flex items-center"><div className="me-2">Vertrauenswürdig</div> {renderStars(cms.rating1)}</div>
             </div>
             <div>
-                <div className="flex items-center"><div className="me-2">Markttrend</div> {renderStars(cms.markttrendRating)}</div>
+                <div className="flex items-center"><div className="me-2">Markttrend</div> {renderStars(cms.rating2)}</div>
             </div>
             <div className="mt-2">
                 <b>Bewertung: {calculateAverageRating()}</b>
