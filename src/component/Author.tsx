@@ -1,3 +1,5 @@
+import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
+
 type AuthorProps = {
     data: {
         username: string;
@@ -8,8 +10,11 @@ type AuthorProps = {
 
 const Author: React.FC<AuthorProps> = ({data}) => {
     return (
-        <div>
-            <h6>Author: {data.name}</h6>
+        <div className="my-5 flex items-center gap-3">
+            Author
+            <Avatar className="h-[45px] w-[45px] flex">
+                <AvatarFallback className="text-purple-400 uppercase rounded-full leading-1 flex h-full w-full items-center justify-center bg-gray-100 text-[15px] font-medium">{data.name.substring(0, 2)}</AvatarFallback>
+            </Avatar>
             {/*<p>{data.name}</p>*/}
             {/*<p>{data.email}</p>*/}
         </div>
