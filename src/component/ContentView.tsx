@@ -6,7 +6,7 @@ type ContentViewProps = {
 
 const ContentView = ({cms}: any) => {
     return (
-        <div>
+        <div className={cms.center && 'text-center'}>
             {cms && <RichText content={cms.content}/>}
         </div>
     );
