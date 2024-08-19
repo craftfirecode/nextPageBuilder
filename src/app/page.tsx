@@ -1,4 +1,5 @@
 import Builder from "@/component/Builder";
+import ColView from "@/component/ColView";
 
 async function getData(pageId: string | number): Promise<any> {
     const apiUrl = process.env.VITE_STRAPI_API_URL;
