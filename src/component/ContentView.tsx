@@ -13,7 +13,7 @@ interface ContentViewProps {
 const ContentView: React.FC<ContentViewProps> = ({ cms }) => {
   return (
     <>
-      {cms.col ? (
+      {cms.col.col ? (
         <ColView cms={cms.col}>
           <div className={cms.center ? "text-center" : ""}>
             <RichText content={cms.content} />
