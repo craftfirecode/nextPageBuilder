@@ -34,7 +34,7 @@ const DesktopMenu = ({ navData }: any) => {
             width="45px"
             alt="Logo"
             src={
-              process.env.VITE_STRAPI_API_URL + navData.logo.data.attributes.url
+              process.env.VITE_STRAPI_API_URL + navData.logo.data?.attributes.url
             }
           />
         </Link>

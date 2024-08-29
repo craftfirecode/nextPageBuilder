@@ -63,7 +63,7 @@ const Nav = async () => {
                     <img
                         width="45px"
                         alt="Logo"
-                        src={process.env.VITE_STRAPI_API_URL + navData.logo.data.attributes.url}
+                        src={process.env.VITE_STRAPI_API_URL + navData.logo.data?.attributes.url}
                     />
                 </Link>
                 <MobileMenu navData={navData} />
