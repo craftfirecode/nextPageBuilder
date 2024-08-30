@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import ButtonView from './ButtonView';
+import { CnButton } from './shadcn/CnButton';
 
 interface Preferences {
     necessary: boolean;
@@ -94,7 +96,7 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ onAccept }) => {
     const t = translations[language];
 
     return (
-        <div className="fixed bottom-0 left-0 border-t right-0 bg-white p-5 shadow-lg flex flex-col items-center">
+        <div className="fixed bottom-0 left-0 border-t right-0 bg-white p-5 flex flex-col items-center">
             <div>{t.message}</div>
             <div className="flex flex-col my-3">
                 <div className="flex items-center">
@@ -128,19 +130,9 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ onAccept }) => {
                     <label className="ml-2">{t.marketing}</label>
                 </div>
             </div>
-            <div>
-                <button
-                    onClick={handleAccept}
-                    className="bg-blue-500 text-white py-2 px-4 mr-2 rounded hover:bg-blue-700"
-                >
-                    {t.accept}
-                </button>
-                <button
-                    onClick={handleDecline}
-                    className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-                >
-                    {t.decline}
-                </button>
+            <div className="flex gap-2">
+                <CnButton onClick={handleAccept}>{t.accept}</CnButton>
+                <CnButton onClick={handleDecline}>{t.decline}</CnButton>
             </div>
             <div className="mt-3 flex items-center">
                 {/*<span className="mr-2">Language:</span>*/}
