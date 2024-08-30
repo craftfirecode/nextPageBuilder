@@ -1,9 +1,7 @@
 import RichText from "@/component/RichText";
 import ButtonView from "@/component/ButtonView";
-import {cn} from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import ContentView from "./ContentView";
-
-
 
 const HeroView = (cms: any) => {
     const backgroundStyle: any = {
@@ -31,8 +29,11 @@ const HeroView = (cms: any) => {
     }
 
     return (
-        <div className={`hero bg-cover bg-center ${cms.cms.vh}`} style={backgroundStyle}>
-            <div className={cn("flex container flex-col justify-center", vh)}>
+        <div className={`hero relative bg-cover bg-center ${cms.cms.vh}`} style={backgroundStyle}>
+            {/* Overlay Div */}
+            <div className="absolute inset-0 opacity-50" style={{ background: cms.cms.background }}></div>
+
+            <div className={cn("relative flex container flex-col justify-center", vh)}>
                 <div className="">
                     <ContentView cms={cms.cms.content}></ContentView>
                     {cms.cms.button &&
