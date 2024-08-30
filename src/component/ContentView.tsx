@@ -1,30 +1,25 @@
 import React from "react";
 import RichText from "@/component/RichText";
-import ColView from "./ColView";
+import classNames from "classnames";
 
 interface ContentViewProps {
   cms: {
     center?: boolean;
     content: string;
-    col?: any; // Assuming col is an object, adjust the type as needed
-  };
+    color: string;
+  }
 }
 
 const ContentView: React.FC<ContentViewProps> = ({ cms }) => {
+  // Kombiniere die Klassen für Zentrierung
+  const combinedClasses = classNames({
+    "text-center": cms.center,
+  });
+
   return (
-    <>
-      {cms.col.col ? (
-        <ColView cms={cms.col}>
-          <div className={cms.center ? "text-center" : ""}>
-            <RichText content={cms.content} />
-          </div>
-        </ColView>
-      ) : (
-        <div className={cms.center ? "text-center" : ""}>
-          <RichText content={cms.content} />
-        </div>
-      )}
-    </>
+    <div className={combinedClasses} style={{ color: cms.color }}>
+      <RichText content={cms.content} />
+    </div>
   );
 };
 
