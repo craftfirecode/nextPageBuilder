@@ -29,7 +29,7 @@ const HeroView = (cms: any) => {
     }
 
     return (
-        <div className={`hero relative bg-cover bg-center ${cms.cms.vh}`} style={backgroundStyle}>
+        <div className={`hero relative bg-cover bg-center py-5 ${cms.cms.vh}`} style={backgroundStyle}>
             {/* Overlay Div */}
             <div className="absolute inset-0 opacity-50" style={{ background: cms.cms.background }}></div>
 
