@@ -32,7 +32,7 @@ async function PostView(cms: PostViewProps) {
                          alt="..."/>
                     <div className="p-4">
                         {item.attributes.level?.level && (
-                            <div className="text-[12px] bg-indigo-50 inline-flex p-1 rounded mb-2">
+                            <div className="font-[Oswald] text-[12px] bg-indigo-50 inline-flex p-1 rounded mb-2">
                                 {item.attributes.level.level}
                             </div>
                         )}
