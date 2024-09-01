@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         <main>
             <Builder data={data.cms} />
             {data.level?.level && (
-                <div className="text-[12px] bg-indigo-50 inline-flex p-1 rounded mt-5">
+                <div className="font-[Oswald] text-[12px] bg-indigo-50 inline-flex p-1 rounded mt-5">
                     {data.level.level}
                 </div>
             )}

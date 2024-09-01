@@ -3,72 +3,93 @@
 @tailwind utilities;
 
 
+
+
+
+
+
+
+/* Merriweather Font */
+
+
 @font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-Thin.ttf') format('truetype');
-  font-weight: 100;
+  font-family: 'Merriweather';
+  src: url('/fonts/Merriweather/Merriweather-Light.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 
+
 @font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
+  font-family: 'Merriweather';
+  src: url('/fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
 
+
 @font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-Light.ttf') format('truetype');
+  font-family: 'Merriweather';
+  src: url('/fonts/Merriweather/Merriweather-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('/fonts/Merriweather/Merriweather-Black.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('/fonts/Merriweather/Merriweather-Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Oswald Font */
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald/static/Oswald-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-Regular.ttf') format('truetype');
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald/static/Oswald-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-Bold.ttf') format('truetype');
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald/static/Oswald-SemiBold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
+
 @font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-ExtraBold.ttf') format('truetype');
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald/static/Oswald-Bold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
 
 * {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Merriweather', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, a, button * {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 
 @layer base {
