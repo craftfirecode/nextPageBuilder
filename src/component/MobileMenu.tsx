@@ -46,7 +46,7 @@ const MobileMenu = ({navData}:  any) => {
                 </SheetTrigger>
                     <SheetContent onPointerDownOutside={() => setOpen(false)} className="pt-2">
                         <SheetHeader>
-                            <SheetTitle>CraftFire Design</SheetTitle>
+                            <SheetTitle>CRAFTFIRE</SheetTitle>
                             <SheetDescription>
                                 {navData.nav.map((navItem: NavItem) => (
                                     <div key={navItem.id} className="mb-3 ">
