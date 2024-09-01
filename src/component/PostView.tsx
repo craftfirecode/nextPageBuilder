@@ -12,7 +12,7 @@ async function getData(filterName: string) {
         Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
     };
     try {
-        const requestUrlNav = `${process.env.VITE_STRAPI_API_URL}/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}&filters[$or][0][title][$contains]=`;
+        const requestUrlNav = `${process.env.VITE_STRAPI_API_URL}/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}&filters[$or][0][title][$contains]=&filters[$or][0][description][$contains]=`;
         const responseUrlNav = await axios.get(requestUrlNav, {headers});
         return responseUrlNav.data.data;
     } catch (error) {
