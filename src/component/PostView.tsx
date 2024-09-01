@@ -12,7 +12,7 @@ async function getData(filterName: string) {
         Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
     };
     try {
-        const requestUrlNav = `${process.env.VITE_STRAPI_API_URL}/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}`;
+        const requestUrlNav = `${process.env.VITE_STRAPI_API_URL}/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}&filters[$or][0][title][$contains]=`;
         const responseUrlNav = await axios.get(requestUrlNav, {headers});
         return responseUrlNav.data.data;
     } catch (error) {
@@ -23,6 +23,7 @@ async function getData(filterName: string) {
 
 async function PostView(cms: PostViewProps) {
     const data: [] = await getData(cms.cms.category.categoryList);
+    console.log(data);
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {data && data.map((item: any, index: number) => (
