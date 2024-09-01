@@ -26,8 +26,8 @@ interface NavData {
 }
 
 async function fetchNavigationData(): Promise<NavData> {
-    const apiUrl = process.env.VITE_STRAPI_API_URL;
-    const apiKey = process.env.VITE_STRAPI_API_KEY;
+    const apiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+    const apiKey = process.env.NEXT_PUBLIC_STRAPI_API_KEY;
 
     if (!apiUrl || !apiKey) {
         throw new Error("API URL or API Key is not defined");
@@ -63,7 +63,7 @@ const Nav = async () => {
                     <img
                         width="45px"
                         alt="Logo"
-                        src={process.env.VITE_STRAPI_API_URL + navData.logo.data?.attributes.url}
+                        src={process.env.NEXT_PUBLIC_STRAPI_API_URL + navData.logo.data?.attributes.url}
                     />
                 </Link>
                 <MobileMenu navData={navData} />

@@ -14,7 +14,7 @@ const ImageGrid = ({ cms }: any) => {
                 return (
                     <div key={index} className={`${widthClass} px-2 mb-4`}>
                         <img 
-                            src={process.env.VITE_STRAPI_API_URL + item.attributes.url}
+                            src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.url}
                             alt="img"
                             className="w-full h-auto" 
                         />

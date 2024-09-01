@@ -23,7 +23,7 @@ export const CarouselView: React.FC<CarouselViewProps> = ({ cms }) => {
                         <img
                             title="slider"
                             alt="slider"
-                            src={process.env.VITE_STRAPI_API_URL + "" + item.img.data.attributes.url}
+                            src={process.env.NEXT_PUBLIC_STRAPI_API_URL + "" + item.img.data.attributes.url}
                             width="100%"
                         />
                     </CarouselItem>

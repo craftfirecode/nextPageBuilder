@@ -31,7 +31,7 @@ type VHeroViewProps = {
 const VHeroView = (cms: VHeroViewProps) => {
 
     const maskBackgroundStyle = {
-        backgroundImage: `url(${process.env.VITE_STRAPI_API_URL}/api${cms.cms.mask?.data?.attributes.url || ''})`,
+        backgroundImage: `url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api${cms.cms.mask?.data?.attributes.url || ''})`,
     };
 
     let vh: any;
@@ -78,7 +78,7 @@ const VHeroView = (cms: VHeroViewProps) => {
             </div>
             <video className="h-full" title="video" muted loop autoPlay width="100%" height="100%"
                    style={{objectFit: 'cover'}}
-                   src={process.env.VITE_STRAPI_API_URL + "" + cms.cms.file.data.attributes.url}></video>
+                   src={process.env.NEXT_PUBLIC_STRAPI_API_URL + "" + cms.cms.file.data.attributes.url}></video>
         </div>
     );
 }

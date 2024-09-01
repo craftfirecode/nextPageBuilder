@@ -1,8 +1,8 @@
 import Builder from "@/component/Builder";
 
 async function getData(pageId: string | number): Promise<any> {
-    const apiUrl = process.env.VITE_STRAPI_API_URL;
-    const apiKey = process.env.VITE_STRAPI_API_KEY;
+    const apiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+    const apiKey = process.env.NEXT_PUBLIC_STRAPI_API_KEY;
 
     if (!apiUrl || !apiKey) {
         throw new Error("API URL or API Key is not defined");

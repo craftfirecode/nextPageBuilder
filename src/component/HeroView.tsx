@@ -5,7 +5,7 @@ import ContentView from "./ContentView";
 
 const HeroView = (cms: any) => {
     const backgroundStyle: any = {
-        backgroundImage: `url(${process.env.VITE_STRAPI_API_URL}${cms.cms.img?.data?.attributes.url || ''})`,
+        backgroundImage: `url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${cms.cms.img?.data?.attributes.url || ''})`,
     };
 
     let vh: any;

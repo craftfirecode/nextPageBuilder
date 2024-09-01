@@ -41,7 +41,7 @@ const ContentImageView: React.FC<ContentImageViewProps> = ({cms}) => {
                 <div className={reverse ? 'order-1' : 'order-2'}>
                     <img className=""
                          alt=""
-                         src={process.env.VITE_STRAPI_API_URL + cms.image.data.attributes.url}/>
+                         src={process.env.NEXT_PUBLIC_STRAPI_API_URL + cms.image.data.attributes.url}/>
                 </div>
             </div>
         </div>
