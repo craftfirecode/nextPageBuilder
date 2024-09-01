@@ -2,12 +2,12 @@ import axios from "axios";
 import Builder from "@/component/Builder";
 
 const headers = {
-  Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
+  Authorization: 'Bearer ' + process.env.NEXT_PUBLIC_STRAPI_API_KEY,
 };
 
 async function getData(pageLink: string | number): Promise<any> {
   try {
-    const apiUrl = process.env.VITE_STRAPI_API_URL;
+    const apiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
     if (!apiUrl) {
       throw new Error("API URL is not defined");
     }
