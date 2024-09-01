@@ -17,7 +17,7 @@ const ContentView: React.FC<ContentViewProps> = ({ cms }) => {
   });
 
   return (
-    <div className={combinedClasses + " overflow-x-hidden overflow-y-auto"} style={{ color: cms.color }}>
+    <div className={combinedClasses + " overflow-x-auto overflow-y-hidden"} style={{ color: cms.color }}>
       <RichText content={cms.content} />
     </div>
   );
