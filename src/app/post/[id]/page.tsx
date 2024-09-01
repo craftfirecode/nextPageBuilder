@@ -3,24 +3,27 @@ import Builder from "@/component/Builder";
 import Author from "@/component/Author";
 
 const headers = {
-    Authorization: 'Bearer ' + process.env.VITE_STRAPI_API_KEY,
+    Authorization: `Bearer ${process.env.VITE_STRAPI_API_KEY}`,
 };
 
-async function getData(permalink: string | number): Promise<any> {
+async function getData(permalink: string | number): Promise<any | null> {
+    const apiUrl = process.env.VITE_STRAPI_API_URL;
+
+    if (!apiUrl) {
+        console.error("API URL is not defined");
+        return null;
+    }
+
     try {
-        const apiUrl = process.env.VITE_STRAPI_API_URL;
-        if (!apiUrl) {
-            throw new Error("API URL is not defined");
-        }
-
         const requestUrl = `${apiUrl}/api/posts?populate=deep&filters[url][$eq]=${permalink}`;
-        const response = await fetch(requestUrl, { next: { revalidate: 1 }, headers });
-        if (!response.ok) {
-            throw new Error("Failed to fetch post data");
+        const response = await axios.get(requestUrl, { headers });
+
+        if (response.status !== 200 || !response.data.data.length) {
+            console.error("Failed to fetch post data or no data found");
+            return null;
         }
 
-        const responseData = await response.json();
-        return responseData.data[0].attributes;
+        return response.data.data[0].attributes;
     } catch (error) {
         console.error("Error fetching data:", error);
         return null;
@@ -28,32 +31,31 @@ async function getData(permalink: string | number): Promise<any> {
 }
 
 export default async function Page({ params }: { params: { id: string } }) {
-    try {
-        const data = await getData(params.id);
-        if (!data) {
-            throw new Error("No data found");
-        }
-
+    const data = await getData(params.id);
+    console.log(data);
+    if (!data) {
         return (
-            <main className="">
-                <Builder data={data.cms} />
-                <Author data={data.author.data.attributes} />
-            </main>
-        );
-    } catch (error) {
-        console.error("Error in Page component:", error);
-        return (
-            <main className="">
-                <div className="flex items-center justify-center h-screen">
-                    <div className="text-center">
-                        <h1 className="text-4xl font-bold">404</h1>
-                        <p className="text-lg">Die Seite, die du suchst, konnte nicht gefunden werden.</p>
-                        <a href="/"
-                           className="mt-4 inline-block px-6 py-2 text-sm font-semibold text-blue-800 bg-blue-100 rounded hover:bg-blue-200">Zurück
-                            zur Startseite</a>
-                    </div>
+            <main className="flex items-center justify-center h-screen">
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold">404</h1>
+                    <p className="text-lg">Die Seite, die du suchst, konnte nicht gefunden werden.</p>
+                    <a href="/" className="mt-4 inline-block px-6 py-2 text-sm font-semibold text-blue-800 bg-blue-100 rounded hover:bg-blue-200">
+                        Zurück zur Startseite
+                    </a>
                 </div>
             </main>
         );
     }
+
+    return (
+        <main>
+            <Builder data={data.cms} />
+            {data.level?.level && (
+                <div className="text-[12px] bg-indigo-50 inline-flex p-1 rounded mt-5">
+                    {data.level.level}
+                </div>
+            )}
+            <Author data={data.author?.data?.attributes ?? {}} />
+        </main>
+    );
 }

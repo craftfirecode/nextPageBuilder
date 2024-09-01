@@ -22,7 +22,6 @@ async function getData(filterName: string) {
 }
 
 async function PostView(cms: PostViewProps) {
-    // console.log(cms);
     const data: [] = await getData(cms.cms.category.categoryList);
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -32,6 +31,11 @@ async function PostView(cms: PostViewProps) {
                          className="w-full h-48 object-cover"
                          alt="..."/>
                     <div className="p-4">
+                        {item.attributes.level?.level && (
+                            <div className="text-[12px] bg-indigo-50 inline-flex p-1 rounded mb-2">
+                                {item.attributes.level.level}
+                            </div>
+                        )}
                         <h6 className="">{item.attributes.title}</h6>
                         <p className="text-gray-600">{item.attributes.description}</p>
                         <Link href={'/post/' + item.attributes.url}>
