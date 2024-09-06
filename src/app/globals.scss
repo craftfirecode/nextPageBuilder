@@ -82,6 +82,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'System';
+  src: url('/fonts/terminal/VT323-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 * {
   font-family: 'Merriweather', sans-serif;
@@ -89,6 +96,11 @@
 
 h1, h2, h3, h4, h5, h6, a, button * {
   font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
+pre * {
+  font-family: 'System', sans-serif;
   font-weight: 400;
 }
 
