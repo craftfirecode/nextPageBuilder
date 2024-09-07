@@ -14,12 +14,12 @@ function PostView({ cms }: PostViewProps) {
   const [data, setData] = useState([]);
   const [titleFilter, setTitleFilter] = useState("");
 
-  const getData = async (filterName: string, titleFilter: string) => {
+  const getData = async (filterName: string, titleFilter: string, limit: string | number | null) => {
     const headers = {
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_KEY}`,
     };
     try {
-      const requestUrlNav = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}&filters[$or][0][description][$contains]=${titleFilter}`;
+      const requestUrlNav = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}&filters[$or][0][description][$contains]=${titleFilter}&pagination[limit]=${limit || 100}`;
       const responseUrlNav = await axios.get(requestUrlNav, { headers });
       return responseUrlNav.data.data;
     } catch (error) {
@@ -30,8 +30,9 @@ function PostView({ cms }: PostViewProps) {
 
   useEffect(() => {
     const categoryList = cms?.category?.categoryList;
+    const limit = cms?.limit;
     if (categoryList) {
-      getData(categoryList, titleFilter)
+      getData(categoryList, titleFilter, limit)
         .then((data) => {
           console.log(data);
           setData(data);
