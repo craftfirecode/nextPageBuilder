@@ -31,7 +31,7 @@ const DesktopMenu = ({ navData }: any) => {
         {/* Logo */}
         <Link href="/">
           <img
-            width="45px"
+            width="30px"
             alt="Logo"
             src={
               process.env.NEXT_PUBLIC_STRAPI_API_URL + navData.logo.data?.attributes.url

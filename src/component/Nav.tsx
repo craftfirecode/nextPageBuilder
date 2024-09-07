@@ -61,7 +61,7 @@ const Nav = async () => {
                 {/* Logo */}
                 <Link href="/">
                     <img
-                        width="45px"
+                        width="25px"
                         alt="Logo"
                         src={process.env.NEXT_PUBLIC_STRAPI_API_URL + navData.logo.data?.attributes.url}
                     />
