@@ -36,8 +36,6 @@ const ContentImageView: React.FC<ContentImageViewProps> = ({cms}) => {
 
                         <ButtonView cms={cms.button}></ButtonView>
                     ) : <></>}
-                    {reverse ? 'true' : 'false'}
-
                 </div>
                 <div className={reverse ? 'lg:order-2 order-1' : ''}>
                     <img className=""
