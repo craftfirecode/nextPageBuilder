@@ -48,6 +48,7 @@ const MobileMenu = ({navData}:  any) => {
                         <SheetHeader>
                             <SheetTitle>CRAFTFIRE</SheetTitle>
                             <SheetDescription>
+                                <nav>
                                 {navData.nav.map((navItem: NavItem) => (
                                     <div key={navItem.id} className="mb-3 ">
                                         {navItem.submenu && navItem.submenu.length > 0 ? (
@@ -73,6 +74,7 @@ const MobileMenu = ({navData}:  any) => {
                                         )}
                                     </div>
                                 ))}
+                                </nav>
                             </SheetDescription>
                         </SheetHeader>
                     </SheetContent>
