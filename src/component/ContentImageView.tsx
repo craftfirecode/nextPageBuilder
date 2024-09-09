@@ -30,7 +30,7 @@ const ContentImageView: React.FC<ContentImageViewProps> = ({cms}) => {
         <div className={'flex-row-reverse' + ' ' + cms.reverse ? '' : ''}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div
-                    className={reverse ? 'order-2 flex flex-col items-start justify-center' : 'order-1 flex flex-col items-start justify-center'}>
+                    className={reverse ? 'lg:order-2 order-1 flex flex-col items-start justify-center' : 'lg:order-1 order-2 flex flex-col items-start justify-center'}>
                     <RichText content={cms.content}/>
                     {cms.button ? (
 
