@@ -22,8 +22,6 @@ async function getData(pageLink: string | number): Promise<any> {
     const settingsData = await settingsResponse.json();
     const navData = settingsData.data.attributes.nav;
 
-    console.log('demo', navData[0].submenu);
-
     // Find the main menu item based on the link
     const mainMenuItem = findObjectByKeyValue(navData, "link", pageLink);
     let pageId = mainMenuItem?.page?.data?.id;
@@ -32,13 +30,12 @@ async function getData(pageLink: string | number): Promise<any> {
     if (mainMenuItem && mainMenuItem.submenu) {
       const submenuItem = findObjectByKeyValue(mainMenuItem.submenu, "link", pageLink);
       if (submenuItem) {
-        console.log("submenu");
         pageId = submenuItem.page.data.id;
       } else {
-        console.log("No submenu item found with the specified link.");
+        // If the submenu item is not found, use the main menu item's page ID
       }
     } else {
-      console.log("No main menu item found with the specified link or it has no submenu.");
+      // If the main menu item has no submenu, use the main menu item's page ID
     }
 
     if (!pageId) {
@@ -83,7 +80,6 @@ function searchObject(obj: any, key: string | number, value: string | number): b
 export default async function Home({ params }: { params: { id: string[] } }) {
   try {
     const pageLink = params.id.join('/');
-    console.log(pageLink);
     const data = await getData(pageLink);
 
     if (!data) {

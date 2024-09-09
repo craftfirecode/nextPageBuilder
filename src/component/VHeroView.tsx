@@ -54,8 +54,6 @@ const VHeroView = (cms: VHeroViewProps) => {
             break;
     }
 
-    console.log(cms.cms.content);
-
     return (
         <div className={vh + " " + "relative"}>
             <div className="absolute top-0 w-full h-full" style={maskBackgroundStyle}></div>

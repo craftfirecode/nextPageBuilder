@@ -26,13 +26,13 @@ const ClientWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     useEffect(() => {
         if (cookiesPreferences.analytics) {
             // Add your Google Analytics code here
-            console.log('Analytics cookies accepted, initializing Google Analytics...');
+            //console.log('Analytics cookies accepted, initializing Google Analytics...');
             // Example: window.gtag('config', 'GA_TRACKING_ID');
         }
 
         if (cookiesPreferences.marketing) {
             // Add your Marketing code here
-            console.log('Marketing cookies accepted, initializing Marketing scripts...');
+            //console.log('Marketing cookies accepted, initializing Marketing scripts...');
             // Example: window.fbq('init', 'FB_PIXEL_ID');
         }
     }, [cookiesPreferences]);

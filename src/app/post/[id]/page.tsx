@@ -32,7 +32,6 @@ async function getData(permalink: string | number): Promise<any | null> {
 
 export default async function Page({ params }: { params: { id: string } }) {
     const data = await getData(params.id);
-    console.log(data);
     if (!data) {
         return (
             <main className="flex items-center justify-center h-screen">

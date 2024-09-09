@@ -34,7 +34,6 @@ function PostView({ cms }: PostViewProps) {
     if (categoryList) {
       getData(categoryList, titleFilter, limit)
         .then((data) => {
-          console.log(data);
           setData(data);
         })
         .catch((error) => {
