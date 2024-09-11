@@ -14,12 +14,20 @@ function PostView({ cms }: PostViewProps) {
   const [data, setData] = useState([]);
   const [titleFilter, setTitleFilter] = useState("");
 
-  const getData = async (filterName: string, titleFilter: string, limit: string | number | null) => {
+  const getData = async (
+    filterName: string,
+    titleFilter: string,
+    limit: string | number | null
+  ) => {
     const headers = {
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_KEY}`,
     };
     try {
-      const requestUrlNav = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}&filters[$or][0][description][$contains]=${titleFilter}&pagination[limit]=${limit || 100}`;
+      const requestUrlNav = `${
+        process.env.NEXT_PUBLIC_STRAPI_API_URL
+      }/api/posts?populate=deep&filters[category][category][categoryList][$eq]=${filterName}&filters[$or][0][description][$contains]=${titleFilter}&pagination[limit]=${
+        limit || 100
+      }`;
       const responseUrlNav = await axios.get(requestUrlNav, { headers });
       return responseUrlNav.data.data;
     } catch (error) {
@@ -60,17 +68,19 @@ function PostView({ cms }: PostViewProps) {
           data.map((item: any, index: number) => (
             <div
               key={index}
-              className="group bg-white shadow-md rounded-lg overflow-hidden"
+              className="relative overflow-hidden p-[2px] bg-gradient-to-r from-[#BDE3FF] to-[#C9BBFB] rounded-lg"
             >
+              <div className="bg-white h-full rounded-lg">
               <img
                 src={
                   process.env.NEXT_PUBLIC_STRAPI_API_URL +
                   item.attributes.img.data.attributes.url
                 }
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover rounded-t-lg"
                 alt="..."
               />
-              <div className="p-4">
+          
+                <div className="p-4">
                 {item.attributes.level?.level && (
                   <div className="font-[Oswald] text-[12px] bg-indigo-50 inline-flex p-1 rounded mb-2">
                     {item.attributes.level.level}
@@ -84,6 +94,8 @@ function PostView({ cms }: PostViewProps) {
                     <ArrowRightIcon className="ms-2" />
                   </CnButton>
                 </Link>
+                  </div>
+                
               </div>
             </div>
           ))}

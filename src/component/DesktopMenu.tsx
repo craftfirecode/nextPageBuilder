@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import * as Menubar from "@radix-ui/react-menubar";
 import Link from "next/link";
 import React from "react";
@@ -34,7 +35,8 @@ const DesktopMenu = ({ navData }: any) => {
             width="30px"
             alt="Logo"
             src={
-              process.env.NEXT_PUBLIC_STRAPI_API_URL + navData.logo.data?.attributes.url
+              process.env.NEXT_PUBLIC_STRAPI_API_URL +
+              navData.logo.data?.attributes.url
             }
           />
         </Link>
@@ -44,10 +46,14 @@ const DesktopMenu = ({ navData }: any) => {
             {navItem.submenu && navItem.submenu.length > 0 ? (
               <Menubar.Root>
                 <Menubar.Menu>
-                  <Menubar.Trigger>{navItem.title}</Menubar.Trigger>
+                  <Menubar.Trigger
+                    className={cn("navPill", "flex items-center gap-2")}
+                  >
+                    {navItem.title}
+                  </Menubar.Trigger>
                   <Menubar.Portal>
                     <Menubar.Content
-                      className="bg-white shadow border p-2 min-w-[220px]"
+                      className="bg-white flex gap-5 flex-col shadow border rounded-xl p-4 min-w-[220px]"
                       align="start"
                       sideOffset={5}
                       alignOffset={-3}
@@ -56,7 +62,7 @@ const DesktopMenu = ({ navData }: any) => {
                         <Menubar.Item key={submenuItem.id} asChild>
                           <Link
                             className="flex w-100"
-                            href={"/" + submenuItem.link} 
+                            href={"/" + submenuItem.link}
                           >
                             {submenuItem.title}
                           </Link>
@@ -66,9 +72,11 @@ const DesktopMenu = ({ navData }: any) => {
                   </Menubar.Portal>
                 </Menubar.Menu>
               </Menubar.Root>
-            ) : (
-              !navItem.hidden ? <Link href={"/" + navItem.link}>{navItem.title}</Link> : null
-            )}
+            ) : !navItem.hidden ? (
+              <Link className="navPill" href={"/" + navItem.link}>
+                {navItem.title}
+              </Link>
+            ) : null}
           </div>
         ))}
       </nav>

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="de">
-        <body className={cn(inter.className, "container")}>
+        <body className={cn(inter.className, "container bg-gradient-to-r from-[#ECF1FB] via-[#DCE5F5] to--[#ECF1FB]")}>
         <Nav/>
         <ClientWrapper>
             {children}

@@ -2,51 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
-
-
-
-
 /* Merriweather Font */
 
-
 @font-face {
-  font-family: 'Merriweather';
-  src: url('/fonts/Merriweather/Merriweather-Light.ttf') format('truetype');
+  font-family: "Merriweather";
+  src: url("/fonts/Merriweather/Merriweather-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'Merriweather';
-  src: url('/fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
+  font-family: "Merriweather";
+  src: url("/fonts/Merriweather/Merriweather-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'Merriweather';
-  src: url('/fonts/Merriweather/Merriweather-Bold.ttf') format('truetype');
+  font-family: "Merriweather";
+  src: url("/fonts/Merriweather/Merriweather-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'Merriweather';
-  src: url('/fonts/Merriweather/Merriweather-Black.ttf') format('truetype');
+  font-family: "Merriweather";
+  src: url("/fonts/Merriweather/Merriweather-Black.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'Merriweather';
-  src: url('/fonts/Merriweather/Merriweather-Italic.ttf') format('truetype');
+  font-family: "Merriweather";
+  src: url("/fonts/Merriweather/Merriweather-Italic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
 }
@@ -54,61 +42,68 @@
 /* Oswald Font */
 
 @font-face {
-  font-family: 'Oswald';
-  src: url('/fonts/Oswald/static/Oswald-Light.ttf') format('truetype');
+  font-family: "Oswald";
+  src: url("/fonts/Oswald/static/Oswald-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Oswald';
-  src: url('/fonts/Oswald/static/Oswald-Regular.ttf') format('truetype');
+  font-family: "Oswald";
+  src: url("/fonts/Oswald/static/Oswald-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Oswald';
-  src: url('/fonts/Oswald/static/Oswald-SemiBold.ttf') format('truetype');
+  font-family: "Oswald";
+  src: url("/fonts/Oswald/static/Oswald-SemiBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'Oswald';
-  src: url('/fonts/Oswald/static/Oswald-Bold.ttf') format('truetype');
+  font-family: "Oswald";
+  src: url("/fonts/Oswald/static/Oswald-Bold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'System';
-  src: url('/fonts/terminal/VT323-Regular.ttf') format('truetype');
+  font-family: "System";
+  src: url("/fonts/terminal/VT323-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
-
 * {
-  font-family: 'Merriweather', sans-serif;
+  font-family: "Merriweather", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, a, button *, nav *, footer * {
-  font-family: 'Oswald', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button *,
+nav *,
+footer * {
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
 
 pre * {
-  font-family: 'Merriweather', sans-serif;
+  font-family: "Merriweather", sans-serif;
   font-size: 13px;
   font-weight: 200;
 }
 
 @layer base {
-body {
-  @apply bg-white;
-}
+  body {
+    @apply bg-white;
+  }
 
   h1 {
     @apply text-5xl font-normal;
@@ -133,19 +128,23 @@ body {
   h6 {
     @apply text-lg font-normal;
   }
-
 }
 
 @layer components {
-.btn-primary {
-  @apply px-[18px] py-[8px] inline-flex text-white bg-gradient-to-r from-purple-500 via-pink-400 bg-orange-300 rounded-[5px];
-}
+  .btn-primary {
+    @apply px-[18px] py-[8px] inline-flex text-white bg-gradient-to-r from-purple-500 via-pink-400 bg-orange-300 rounded-[5px];
+  }
 
   .btn-outline-primary {
     @apply p-[2px] inline-flex text-white bg-gradient-to-r from-purple-500 via-pink-400 bg-orange-300 rounded-[5px];
     .btn-inner {
-      @apply px-[18px] py-[8px] text-white bg-darkblue rounded-[5px]
+      @apply px-[18px] py-[8px] text-white bg-darkblue rounded-[5px];
     }
+  }
+
+  .navPill {
+    //@apply px-[18px] py-[8px] inline-flex text-white bg-gradient-to-r from-purple-500 via-pink-400 bg-orange-300 rounded-full;
+    @apply bg-white px-[25px] py-[5px] rounded-full;
   }
 }
 
@@ -153,24 +152,25 @@ $sizes: 15, 20, 30, 45, 50;
 
 @each $size in $sizes {
   .mt-static-#{$size} {
-    margin-top: $size+px;
+    margin-top: $size + px;
   }
   .mb-static-#{$size} {
-    margin-bottom: $size+px;
+    margin-bottom: $size + px;
   }
   .pt-static-#{$size} {
-    padding-top: $size+px;
+    padding-top: $size + px;
   }
   .pb-static-#{$size} {
-    padding-bottom: $size+px;
+    padding-bottom: $size + px;
   }
 }
 
-.AccordionTrigger[data-state='open'] > .AccordionChevron {
+.AccordionTrigger[data-state="open"] > .AccordionChevron {
   transform: rotate(180deg);
 }
 
-ol, ul {
+ol,
+ul {
   list-style: inherit;
   margin: revert;
   padding: revert;
