@@ -68,7 +68,7 @@ function PostView({ cms }: PostViewProps) {
           data.map((item: any, index: number) => (
             <div
               key={index}
-              className="relative overflow-hidden p-[2px] bg-gradient-to-r from-[#BDE3FF] to-[#C9BBFB] rounded-lg"
+              className="border-fx"
             >
               <div className="bg-white h-full rounded-lg">
               <img

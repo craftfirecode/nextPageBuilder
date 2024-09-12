@@ -38,7 +38,7 @@ const ContentImageView: React.FC<ContentImageViewProps> = ({cms}) => {
                     ) : <></>}
                 </div>
                 <div className={reverse ? 'lg:order-2 order-1 flex justify-end' : ''}>
-                    <img className="lg:w-[95%] w-[100%]"
+                    <img className="border-fx lg:w-[95%] w-[100%]"
                          alt=""
                          src={process.env.NEXT_PUBLIC_STRAPI_API_URL + cms.image.data.attributes.url}/>
                 </div>

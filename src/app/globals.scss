@@ -146,6 +146,11 @@ pre * {
     //@apply px-[18px] py-[8px] inline-flex text-white bg-gradient-to-r from-purple-500 via-pink-400 bg-orange-300 rounded-full;
     @apply bg-white px-[25px] py-[5px] rounded-full;
   }
+
+  .border-fx {
+    @apply relative overflow-hidden p-[2px] bg-gradient-to-r from-[#BDE3FF] to-[#C9BBFB] rounded-lg;
+
+  }
 }
 
 $sizes: 15, 20, 30, 45, 50;

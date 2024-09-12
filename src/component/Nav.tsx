@@ -57,7 +57,7 @@ const Nav = async () => {
             {/* Desktop Navigation */}
             <DesktopMenu navData={navData} />
             {/* Mobile Navigation */}
-            <nav className="md:hidden justify-between flex items-center gap-4 py-2 border-b">
+            <nav className="md:hidden justify-between flex items-center gap-4 py-2">
                 {/* Logo */}
                 <Link href="/">
                     <img

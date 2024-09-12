@@ -29,13 +29,13 @@ const HeroView = (cms: any) => {
     }
 
     return (
-        <div className={`hero relative bg-cover bg-center py-5 ${cms.cms.vh}`} style={backgroundStyle}>
+        <div className="border-fx">
+             <div className={`hero relative rounded-lg bg-cover bg-center py-5 ${cms.cms.vh}`} style={backgroundStyle}>
             {/* Overlay Div */}
             <div className="absolute inset-0 opacity-50" style={{ background: cms.cms.background }}></div>
-
             <div className={cn("relative flex container flex-col justify-center", vh)}>
                 <div className="">
-                    <ContentView cms={cms.cms.content}></ContentView>
+                    {cms.cms.content && <ContentView cms={cms.cms.content}></ContentView>}
                     {cms.cms.button &&
                         <div className="w-auto mt-3">
                             <ButtonView cms={cms.cms.button}></ButtonView>
@@ -44,6 +44,9 @@ const HeroView = (cms: any) => {
                 </div>
             </div>
         </div>
+
+        </div>
+       
     );
 }
 

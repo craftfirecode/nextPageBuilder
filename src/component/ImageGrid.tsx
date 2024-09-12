@@ -16,7 +16,7 @@ const ImageGrid = ({ cms }: any) => {
                         <img 
                             src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes.url}
                             alt="img"
-                            className="w-full h-auto" 
+                            className="w-full h-auto border-fx" 
                         />
                     </div>
                 );
